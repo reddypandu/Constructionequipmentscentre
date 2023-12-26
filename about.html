@@ -431,7 +431,7 @@
     </style>
 
     <!-- Header Start -->
-    <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;">
+    <div class="jumbotron jumbotron-fluid bg-jumbotron">
         <div class="container text-center py-5">
             <h3 class="text-white display-3 mb-4">About</h3>
             <div class="d-inline-flex align-items-center text-white">
@@ -676,7 +676,6 @@
         }
 
         .r {
-
             display: flex;
             flex-wrap: wrap;
             margin-right: -15px;
@@ -758,6 +757,24 @@
             font-weight: 700;
             font-size: 48px;
             color: #0c1f38;
+        }
+
+        @media(max-width:992px) {
+            .r {
+                flex-direction: column;
+            }
+
+            .col-sm-4 {
+                max-width: 100% !important;
+            }
+
+            .bgsection {
+                padding: 1.5rem;
+            }
+
+            .section>.container {
+                padding: 2rem;
+            }
         }
     </style>
 

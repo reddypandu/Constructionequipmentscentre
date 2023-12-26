@@ -4354,6 +4354,11 @@ input[type="button"].btn-block {
 .top-s {
   display: flex;
 }
+@media (max-width: 992px) {
+  .top-s {
+    display: none;
+  }
+}
 @media (max-width: 450px) {
   .top-s {
     flex-direction: column;
@@ -5350,6 +5355,11 @@ a.badge-dark.focus {
 @media (min-width: 576px) {
   .jumbotron {
     padding: 4rem 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .jumbotron {
+    margin-top: 2rem;
   }
 }
 
