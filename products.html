@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Construction Equipment Centre</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo (1) favicon.png">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--book table script-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('39hCsEwrxcKGEpEyd');
+        })();
+    </script>
+    <!--book table script-->
+</head>
+
+<body>
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+        <!-- <img alt="Construction Equipments" src="img/logo (1).png" style="width:250px;" /> -->
+        <!-- <div class="loader"></div> -->
+        <div class="loadingspinner">
+            <div id="square1"></div>
+            <div id="square2"></div>
+            <div id="square3"></div>
+            <div id="square4"></div>
+            <div id="square5"></div>
+        </div>
+    </div>
+    <!--loader-->
+    <style>
+        .loadingspinner {
+            --square: 26px;
+            --offset: 30px;
+            --duration: 2.4s;
+            --delay: 0.2s;
+            --timing-function: ease-in-out;
+            --in-duration: 0.4s;
+            --in-delay: 0.1s;
+            --in-timing-function: ease-out;
+            width: calc(3 * var(--offset) + var(--square));
+            height: calc(2 * var(--offset) + var(--square));
+            padding: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .loadingspinner div {
+            display: inline-block;
+            background: #ffc31d;
+            /*background: var(--text-color);*/
+            /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
+            border: none;
+            border-radius: 2px;
+            width: var(--square);
+            height: var(--square);
+            position: absolute;
+            padding: 0px;
+            margin: 0px;
+            font-size: 6pt;
+            color: black;
+        }
+
+        .loadingspinner #square1 {
+            left: calc(0 * var(--offset));
+            top: calc(0 * var(--offset));
+            animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
+                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        .loadingspinner #square2 {
+            left: calc(0 * var(--offset));
+            top: calc(1 * var(--offset));
+            animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
+                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        .loadingspinner #square3 {
+            left: calc(1 * var(--offset));
+            top: calc(1 * var(--offset));
+            animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
+                squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        .loadingspinner #square4 {
+            left: calc(2 * var(--offset));
+            top: calc(1 * var(--offset));
+            animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
+                squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        .loadingspinner #square5 {
+            left: calc(3 * var(--offset));
+            top: calc(1 * var(--offset));
+            animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
+                squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+        }
+
+        @keyframes square1 {
+            0% {
+                left: calc(0 * var(--offset));
+                top: calc(0 * var(--offset));
+            }
+
+            8.333% {
+                left: calc(0 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            100% {
+                left: calc(0 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+        }
+
+        @keyframes square2 {
+            0% {
+                left: calc(0 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            8.333% {
+                left: calc(0 * var(--offset));
+                top: calc(2 * var(--offset));
+            }
+
+            16.67% {
+                left: calc(1 * var(--offset));
+                top: calc(2 * var(--offset));
+            }
+
+            25.00% {
+                left: calc(1 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            83.33% {
+                left: calc(1 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            91.67% {
+                left: calc(1 * var(--offset));
+                top: calc(0 * var(--offset));
+            }
+
+            100% {
+                left: calc(0 * var(--offset));
+                top: calc(0 * var(--offset));
+            }
+        }
+
+        @keyframes square3 {
+
+            0%,
+            100% {
+                left: calc(1 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            16.67% {
+                left: calc(1 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            25.00% {
+                left: calc(1 * var(--offset));
+                top: calc(0 * var(--offset));
+            }
+
+            33.33% {
+                left: calc(2 * var(--offset));
+                top: calc(0 * var(--offset));
+            }
+
+            41.67% {
+                left: calc(2 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            66.67% {
+                left: calc(2 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            75.00% {
+                left: calc(2 * var(--offset));
+                top: calc(2 * var(--offset));
+            }
+
+            83.33% {
+                left: calc(1 * var(--offset));
+                top: calc(2 * var(--offset));
+            }
+
+            91.67% {
+                left: calc(1 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+        }
+
+        @keyframes square4 {
+            0% {
+                left: calc(2 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            33.33% {
+                left: calc(2 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            41.67% {
+                left: calc(2 * var(--offset));
+                top: calc(2 * var(--offset));
+            }
+
+            50.00% {
+                left: calc(3 * var(--offset));
+                top: calc(2 * var(--offset));
+            }
+
+            58.33% {
+                left: calc(3 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            100% {
+                left: calc(3 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+        }
+
+        @keyframes square5 {
+            0% {
+                left: calc(3 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            50.00% {
+                left: calc(3 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            58.33% {
+                left: calc(3 * var(--offset));
+                top: calc(0 * var(--offset));
+            }
+
+            66.67% {
+                left: calc(2 * var(--offset));
+                top: calc(0 * var(--offset));
+            }
+
+            75.00% {
+                left: calc(2 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+
+            100% {
+                left: calc(2 * var(--offset));
+                top: calc(1 * var(--offset));
+            }
+        }
+
+        @keyframes squarefadein {
+            0% {
+                transform: scale(0.75);
+                opacity: 0.0;
+            }
+
+            100% {
+                transform: scale(1.0);
+                opacity: 1.0;
+            }
+        }
+    </style>
+    <!-- Topbar Start -->
+    <div class="container-fluid d-lg-block" style="background-color: #153662;padding: 0;">
+        <div class="row py-2 px-lg-5">
+            <div class="col-lg-6 text-left mb-2 mb-lg-0">
+                <div class="top-s">
+                    <small style="color: white;"><a href="tel:+919959997132"></a><i
+                            class="fa fa-phone-alt mr-2"></i>9959997132</a></small>
+                    <small class="px-3 t-line">|</small>
+                    <small style="color: white;"><i class="fa fa-envelope mr-2"
+                            style="word-break: break-all;"></i>constructionequipmentcentre@gmail.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-primary px-2" href="tel:+919959997132"><i class="fas fa-phone-alt"
+                            style="color: #ffc31d;"></i></a>
+                    <a class="text-primary px-2" href="https://www.facebook.com/constructionequipmentcentre">
+                        <i class="fab fa-facebook-f" style="color: #ffc31d;"></i>
+                    </a>
+                    <a class="text-primary px-2"
+                        href="https://www.google.com/maps/place/T19+TOWER,+5-4-187%2F6,+Mahatma+Gandhi+Rd,+Karbala+Maidan,+Rani+Gunj,+Secunderabad,+Hyderabad,+Telangana+500003/@17.4288818,78.4873752,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9a1d4515d831:0xbddd57a426729de6!8m2!3d17.4288818!4d78.4873752?authuser=0&entry=ttu">
+                        <i class="fas fa-map-marker-alt" style="color: #ffc31d;"></i>
+                    </a>
+                    <a class="text-primary px-2" href="https://www.instagram.com/constructionequipmentcentre">
+                        <i class="fab fa-instagram" style="color: #ffc31d;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <style>
+
+
+    </style>
+    <!-- Navbar Start -->
+    <div class="container-fluid n" style="padding: 0;background-color: #153662;">
+        <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="#" class="navbar-brand ml-lg-3">
+                <img alt="constructionequipmentcentre" class="logo" src="./img/logo (1).png" style="width:200px" />
+            </a>
+            <button type="button" style="background-color: #ffc31d; box-shadow: 0px 2px 10px #ffc31d;"
+                class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="nav-links navbar-nav m-auto py-0">
+                    <a href="index.html" class="nav-item nav-link nav">Home</a>
+                    <a href="about.html" class="nav-item nav-link nav">About</a>
+                    <a href="#" class="nav-item nav-link nav active">Products</a>
+
+                    <a href="gallery.html" class="nav-item nav-link nav">Gallery</a>
+
+                    <a href="contact.html" class="nav-item nav-link nav">Contact us</a>
+                </div>
+                <!-- <a href="#appointment" class="btn btn-primary d-none d-lg-block nav" style="padding-left: 10px;">Book
+                    Now</a> -->
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+    <!--
+    whatsapp logo
+-->
+
+    <div class="whatsapp">
+        <a href="https://wa.me/+919959997132" class="fab fa-whatsapp"></a>
+    </div>
+    <!--
+whatsapp logo
+-->
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h3 class="text-white display-3 mb-4">Services</h3>
+            <div class="d-inline-flex align-items-center text-white">
+                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <i class="far fa-circle px-3"></i>
+
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+
+    <!-- Service Start -->
+    <div class="container-fluid px-0 py-2 my-5" style="background-color: grey;">
+        <div class="row mx-0 justify-content-center text-center">
+            <div class="col-lg-6">
+                <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">Our Works</h6>
+                <!-- <h1>Spa & Beauty Services</h1> -->
+            </div>
+        </div>
+        <div class="owl-carousel service-carousel">
+
+            <div class="service-item position-relative">
+                <img alt="constructionequipmentcentre" class="img-fluid" src="img/slide-1.jpg">
+                <!-- <div class="service-text text-center">
+                    <h4 class="text-white font-weight-medium px-3">Body Massage</h4>
+                    <p class="text-white px-3 mb-3">
+                        A body massage involves the manipulation of soft tissues to enhance physical and mental
+                        well-being through techniques such as rubbing, kneading, and applying pressure.</p>
+                    <div class="w-100 bg-white text-center p-4">
+                        <a class="btn btn-primary" href="#footer">Visit Now</a>
+                    </div>
+                </div> -->
+            </div>
+            <div class="service-item position-relative">
+                <img alt="constructionequipmentcentre" class="img-fluid" src="img/slide-2.jpg">
+                <!-- <div class="service-text text-center">
+                    <h4 class="text-white font-weight-medium px-3">Stone Therapy</h4>
+                    <p class="text-white px-3 mb-3">Stone therapy, also known as hot stone massage, involves placing
+                        heated stones on the body to enhance relaxation and promote healing during a massage session.
+                    </p>
+                    <div class="w-100 bg-white text-center p-4">
+                        <a class="btn btn-primary" href="#footer">Visit Now</a>
+                    </div>
+                </div> -->
+            </div>
+            <div class="service-item position-relative">
+                <img alt="constructionequipmentcentre" class="img-fluid" src="img/slide-3.jpg">
+                <!-- <div class="service-text text-center">
+                    <h4 class="text-white font-weight-medium px-3">Facial Therapy</h4>
+                    <p class="text-white px-3 mb-3">
+                        Facial therapy involves specialized skincare treatments designed to improve and maintain the
+                        health and appearance of the face, addressing concerns such as aging, acne, and overall skin
+                        rejuvenation.</p>
+                    <div class="w-100 bg-white text-center p-4">
+                        <a class="btn btn-primary" href="#footer">Visit Now</a>
+                    </div>
+                </div> -->
+            </div>
+            <div class="service-item position-relative">
+                <img alt="constructionequipmentcentre" class="img-fluid" src="img/slide-4.jpg">
+                <!-- <div class="service-text text-center">
+                    <h4 class="text-white font-weight-medium px-3">Skin Care</h4>
+                    <p class="text-white px-3 mb-3">"Skin care involves maintaining and enhancing the health and
+                        appearance of the skin through cleansing, moisturizing, protection from the sun, and other
+                        practices."</p>
+                    <div class="w-100 bg-white text-center p-4">
+                        <a class="btn btn-primary" href="#footer">Visit Now</a>
+                    </div>
+                </div> -->
+            </div>
+            <div class="service-item position-relative">
+                <img alt="constructionequipmentcentre" class="img-fluid" src="img/about-img-1.jpg">
+                <!-- <div class="service-text text-center">
+                    <h4 class="text-white font-weight-medium px-3">Stream Bath</h4>
+                    <p class="text-white px-3 mb-3">Stream bathing involves immersing oneself in natural water bodies
+                        like streams, providing a therapeutic experience that promotes relaxation and well-being.</p>
+                    <div class="w-100 bg-white text-center p-4">
+                        <a class="btn btn-primary" href="#footer">Visit Now</a>
+                    </div>
+                </div> -->
+            </div>
+            <div class="service-item position-relative">
+                <img alt="constructionequipmentcentre" class="img-fluid" src="img/about-img-3.jpg">
+                <!-- <div class="service-text text-center">
+                    <h4 class="text-white font-weight-medium px-3">Face Masking</h4>
+                    <p class="text-white px-3 mb-3">Face masking involves applying a protective covering over the
+                        nose
+                        and mouth, typically a cloth or medical mask, to reduce the spread of respiratory droplets
+                        and
+                        protect against the transmission of infectious agents.</p>
+                    <div class="w-100 bg-white text-center p-4">
+                        <a class="btn btn-primary" href="#footer">Visit Now</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Pricing Start women -->
+    <h2 class="text-center p-3">Products</h2>
+    <div class="container-fluid bg-pricing">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 pt-5 pb-lg-5" data-aos="fade-up">
+                    <div class="pricing-text bg-light p-4 p-lg-5 my-lg-5">
+                        <div class="owl-carousel pricing-carousel">
+                            <img src="./img/slide-1.jpg" alt="constructionequipmentcentre" />
+                            <img src="./img/slide-2.jpg" alt="constructionequipmentcentre" />
+                            <img src="./img/slide-3.jpg" alt="constructionequipmentcentre" />
+                            <img src="./img/slide-4.jpg" alt="constructionequipmentcentre" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing End women -->
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-2">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 pb-5 pb-lg-0">
+                    <!-- <div class="layout21_image-wrapper">
+                        <video style="width: 100%; height: 100%; object-fit: cover" autoplay="" loop="" muted=""
+                            src="./img/testimonial.jpg"></video>
+                    </div> -->
+                    <img class="img-fluid w-100" src="img/about-img-3.jpg" alt="">
+                </div>
+                <div class="col-lg-6 pl-3">
+                    <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">Testimonial</h6>
+                    <h1 class="mb-4">What Our Clients Say!</h1>
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="position-relative">
+                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
+                                style="top: -6px; right: 0;"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="img-fluid rounded-circle" src="img/gallery-4.jpg"
+                                    style="width: 60px; height: 60px;object-fit: scale-down;" alt="">
+                                <div class="ml-3">
+                                    <h6 class="text-uppercase">David N</h6>
+                                    <span>-Student</span>
+                                </div>
+                            </div>
+                            <p class="m-0 text-white pl-3">"I've been a regular at Glamour Lounge for years, and I
+                                couldn't
+                                be happier
+                                with the service. The stylists are not only skilled but also incredibly attentive to
+                                my
+                                preferences. Plus, it's refreshing to find a salon that caters to everyone. Kudos to
+                                the
+                                team!"
+                            </p>
+                        </div>
+                        <div class="position-relative">
+                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
+                                style="top: -6px; right: 0;"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="img-fluid rounded-circle" src="img/gla (17).jpeg"
+                                    style="width: 60px; height: 60px;object-fit: scale-down;" alt="">
+                                <div class="ml-3">
+                                    <h6 class="text-uppercase">Laxmi R</h6>
+                                    <span>-Engineer</span>
+                                </div>
+                            </div>
+                            <p class="m-0 text-white"> "Finding a unisex salon that understands my style has always
+                                been a
+                                challenge, but Glamour Lounge exceeded my expectations. From haircuts to skincare,
+                                they
+                                deliver exceptional results every time. I highly recommend them to anyone seeking a
+                                versatile and welcoming salon experience."
+                            </p>
+                        </div>
+                        <div class="position-relative">
+                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
+                                style="top: -6px; right: 0;"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="img-fluid rounded-circle" src="img/gla (20)1.jpeg"
+                                    style="width: 60px; height: 60px;" alt="">
+                                <div class="ml-3">
+                                    <h6 class="text-uppercase">JANAVI M</h6>
+                                    <span>-Model</span>
+                                </div>
+                            </div>
+                            <p class="m-0 text-white">"I recently visited Glamour Lounge for a special event, and I
+                                was blown away
+                                by the level of professionalism and talent. The team not only transformed my look
+                                but
+                                also made me feel comfortable throughout the process. I'm definitely making this
+                                salon
+                                my go-to spot!"
+                            </p>
+                        </div>
+                        <div class="position-relative">
+                            <i class="fa fa-3x fa-quote-right text-primary position-absolute"
+                                style="top: -6px; right: 0;"></i>
+                            <div class="d-flex align-items-center mb-3">
+                                <img class="img-fluid rounded-circle" src="img/gallery-1.jpg"
+                                    style="width: 60px; height: 60px;" alt="">
+                                <div class="ml-3">
+                                    <h6 class="text-uppercase">D Ravi</h6>
+                                    <span>-Business Man</span>
+                                </div>
+                            </div>
+                            <p class="m-0 text-white">"I can't thank Glamour Lounge enough for making me feel
+                                fabulous every time I
+                                visit. As a guy, I was a bit apprehensive at first, but the staff's professionalism
+                                and
+                                the unisex environment immediately put me at ease. The quality of service is
+                                exceptional, and I wouldn't trust my grooming and style needs to anyone else."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <style>
+        .select:focus {
+            background-color: #f9df7a;
+        }
+
+        .select.form-control {
+            background-color: #02445f;
+        }
+    </style>
+    <!-- Footer Start -->
+    <div class="footer container-fluid position-relative py-2 pl-4" style="margin-top: 90px;background-color: #153662;"
+        id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 pr-lg-5 mb-5">
+                    <a href="#" class="navbar-brand">
+                        <img alt="constructionequipmentcentre" src="./img/logo (1).png"
+                            style="width:300px;padding: 10px;" />
+                    </a>
+                    <p></p>
+                    <p><i class="fa fa-map-marker-alt mr-2"></i># 5-4-93, M.G ROAD, RANIGUNJ, OPP: T19 TOWER,
+                        SECUNDERABAD-500003</p>
+                    <p><i class="fa fa-phone-alt mr-2"></i>9959997132</p>
+                    <p style="word-break: break-all;"><i
+                            class="fa fa-envelope mr-2"></i>constructionequipmentcentre@gmail.com</p>
+                    <div class="d-flex justify-content-start mt-4">
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="tel:+919959997132"><i
+                                class="fas fa-phone-alt" style="color:#153662 !important;"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2"
+                            href="https://www.google.com/maps/place/T19+TOWER,+5-4-187%2F6,+Mahatma+Gandhi+Rd,+Karbala+Maidan,+Rani+Gunj,+Secunderabad,+Hyderabad,+Telangana+500003/@17.4288818,78.4873752,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9a1d4515d831:0xbddd57a426729de6!8m2!3d17.4288818!4d78.4873752?authuser=0&entry=ttu">
+                            <i class="fas fa-map-marker-alt" style="color:#153662 !important;"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square mr-2 "
+                            href="https://www.facebook.com/constructionequipmentcentre"><i class="fab fa-facebook-f"
+                                style="color:#153662 !important;"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square"
+                            href="https://www.instagram.com/constructionequipmentcentre"><i class="fab fa-instagram"
+                                style="color:#153662 !important;"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-lg-5">
+                    <div class="row">
+                        <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="index.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Home</a>
+                                <a class="text-white-50 mb-2" href="about.html"><i
+                                        class="fa fa-angle-right mr-2"></i>About</a>
+                                <a class="text-white-50 mb-2" href="service.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Our
+                                    Products
+                                </a>
+                                <a class="text-white-50 mb-2" href="gallery.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Gallery</a>
+                                <a class="text-white-50" href="contact.html"><i
+                                        class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-5">
+                            <h5 class="text-white text-uppercase mb-4">Our Products</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-white-50 mb-2" href="service.html"><i
+                                        class="fa fa-angle-right mr-2"></i>QC LAB TESTING EQUIPMENTS</a>
+                                <a class="text-white-50 mb-2" href="service.html"><i
+                                        class="fa fa-angle-right mr-2"></i>CONSTRUCTION EQUIPMENTS</a>
+                                <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>
+                                    POWER TOOLS</a>
+                                <a class="text-white-50 mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>
+                                    VICAT NEEDLE</a>
+                                <a class="text-white-50" href="service.html"><i class="fa fa-angle-right mr-2"></i>sand
+                                    pouring cylinder</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-light border-top py-4"
+        style="border-color: rgba(256, 256, 256, .15) !important;background-color: #153662;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                    <p class="m-0 text-white">&copy; <a href="#" style="color:#ffc31d">constructionequipmentcentre</a>.
+                        All
+                        Rights
+                        Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-right">
+                    <p class="m-0 text-white">Designed by <a href="https://htmlcodex.com" style="color:#ffc31d">The
+                            Patterns Company</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!--chatbot script-->
+    <!--Start of Tawk.to Script-->
+    <!-- <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6560ec7aba9fcf18a80e9f46/1hg19ng29';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script> -->
+    <!--End of Tawk.to Script-->
+    <script>
+        //book appointment
+
+        document
+            .getElementById("bookingForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                var fullName = document.getElementById("fullName").value;
+                var email = document.getElementById("mail").value;
+                var date = document.getElementById("date").value;
+                var time = document.getElementById("time").value;
+                var message = document.getElementById("message").value;
+                var service = document.getElementById("selectedValue").textContent;
+
+
+                // debugger
+
+                // if (!fullName) {
+                //     showError(document.getElementById("name"), "Please enter your name.");
+                //     // return;
+                // }
+
+                // if (!email) {
+                //     showError(document.getElementById("email"), "Please enter your email.");
+                //     // return;
+                // }
+
+                // if (!subject) {
+                //     showError(document.getElementById("subject"), "Please enter a subject.");
+                //     // return;
+                // }
+
+                // if (!message) {
+                //     showError(document.getElementById("message"), "Please enter your message.");
+                //     // return;
+                // }
+                var contact = "+9173373 59025";
+
+                var encodedMessage = encodeURIComponent(
+                    "Name: " +
+                    fullName +
+                    "\n" +
+                    "Email: " +
+                    email +
+                    "\n" +
+                    "Date: " +
+                    date +
+                    "\n" +
+                    "Time: " +
+                    time +
+                    "\n" +
+                    "Service" +
+                    "\n" +
+                    service +
+                    "\n" +
+                    "Message: " +
+                    message
+                );
+
+                // Check if user is on a mobile device
+                if (
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                        navigator.userAgent
+                    )
+                ) {
+                    // Mobile device, open WhatsApp
+                    var whatsappLink = `whatsapp://send?phone=${contact}&text=${encodedMessage}`;
+                    window.open(whatsappLink, "_blank");
+                } else {
+                    // Desktop device, open default email client
+                    emailjs
+                        .send("service_fx42pst", "template_2ngcxmf", {
+                            from_name: fullName,
+                            to_name: "The Glamour Lounge Unisex Salon",
+                            message: `Booking on ${date} at ${time}
+    Message : ${message}
+    Service : ${service}
+    Reply to ${email}`,
+                            reply_to: email,
+                        })
+                        .then(
+                            function (response) {
+                                // alert("Mail Sent");
+                                document.getElementById("thankYouMessage").style.display = "block";
+                                document.getElementById("bookingForm").reset();
+                                console.log("response==>", response);
+                                // You can redirect or perform other actions after successful email sending
+                            },
+                            function (error) {
+                                alert("Error Sending Mail");
+                                console.log("error==>", error);
+                            }
+                        );
+                }
+            });
+    </script>
+
+</body>
+
+</html>
