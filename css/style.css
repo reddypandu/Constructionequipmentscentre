@@ -4335,6 +4335,8 @@ input[type="button"].btn-block {
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #ffc31d;
+  border-radius: 10px;
+  box-shadow: 2px -4px 2px #ffc31d;
 }
 
 .nav-fill > .nav-link,
@@ -4549,7 +4551,7 @@ input[type="button"].btn-block {
 
 .navbar-collapse {
   flex-basis: 100%;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   align-items: center;
   background-color: transparent;
 }
@@ -10193,6 +10195,8 @@ h6,
 .navbar-light .navbar-nav .nav-link.active {
   color: #153662;
   background-color: #ffc31d;
+  border-radius: 10px;
+  box-shadow: 2px -4px 2px #ffc31d;
 }
 
 @media (max-width: 991.98px) {

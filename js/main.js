@@ -80,7 +80,7 @@
     margin: 30,
     loop: true,
     dots: false,
-    nav: false,
+    nav: true,
     responsive: {
       0: {
         items: 1,
@@ -90,6 +90,9 @@
       },
       768: {
         items: 2,
+      },
+      992: {
+        items: 4,
       },
     },
   });
