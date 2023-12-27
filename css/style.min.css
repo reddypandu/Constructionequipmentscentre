@@ -406,7 +406,7 @@ h6,
   }
 }
 .display-3 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -2706,6 +2706,7 @@ fieldset:disabled a.btn {
   color: #212529;
   background-color: #fef1ef;
   border-color: #fef1ef;
+  box-shadow: 2px -4px 2px #ffc31d;
 }
 .btn-outline-light:focus,
 .btn-outline-light.focus {

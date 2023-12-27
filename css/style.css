@@ -482,9 +482,10 @@ h6,
 }
 
 .display-3 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 300;
   line-height: 1.2;
+  text-shadow: 2px -4px 3px black;
 }
 
 @media (max-width: 1200px) {
@@ -3113,6 +3114,7 @@ fieldset:disabled a.btn {
   color: #212529;
   background-color: #fef1ef;
   border-color: #fef1ef;
+  box-shadow: 2px -4px 2px #ffc31d;
 }
 
 .btn-outline-light:focus,
@@ -4549,9 +4551,13 @@ input[type="button"].btn-block {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
-  background-color: #153662;
+  background-color: transparent;
 }
-
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: #153662;
+  }
+}
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
@@ -4808,12 +4814,15 @@ input[type="button"].btn-block {
 
 .navbar-light .navbar-nav .nav-link {
   color: white;
+  border: 1px solid white;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
   color: #153662;
   background-color: #ffc31d;
+  border-radius: 10px;
+  box-shadow: 2px -4px 2px #ffc31d;
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -10258,7 +10267,7 @@ h6,
 
 .bg-jumbotron {
   background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)),
-    url(../img/overlay.jpg), no-repeat center center;
+    url(../img/banner-about-page.jpg), no-repeat center center;
   background-size: cover;
 }
 
