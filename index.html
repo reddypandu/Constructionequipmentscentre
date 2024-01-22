@@ -54,253 +54,21 @@
     </div>
     <!--loader-->
     <style>
-        .loadingspinner {
-            --square: 26px;
-            --offset: 30px;
-            --duration: 2.4s;
-            --delay: 0.2s;
-            --timing-function: ease-in-out;
-            --in-duration: 0.4s;
-            --in-delay: 0.1s;
-            --in-timing-function: ease-out;
-            width: calc(3 * var(--offset) + var(--square));
-            height: calc(2 * var(--offset) + var(--square));
-            padding: 0px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 10px;
-            margin-bottom: 30px;
-            position: relative;
+        .cookies {
+            background: rgba(0, 0, 0, .8);
+            padding: 15px 50px;
+            transition: width .35s ease-in-out;
+            position: fixed;
+            bottom: 0;
+            z-index: 999;
         }
 
-        .loadingspinner div {
-            display: inline-block;
-            background: #ffc31d;
-            /*background: var(--text-color);*/
-            /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
-            border: none;
-            border-radius: 2px;
-            width: var(--square);
-            height: var(--square);
-            position: absolute;
-            padding: 0px;
-            margin: 0px;
-            font-size: 6pt;
-            color: black;
-        }
-
-        .loadingspinner #square1 {
-            left: calc(0 * var(--offset));
-            top: calc(0 * var(--offset));
-            animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square2 {
-            left: calc(0 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square3 {
-            left: calc(1 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square4 {
-            left: calc(2 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square5 {
-            left: calc(3 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        @keyframes square1 {
-            0% {
-                left: calc(0 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            8.333% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square2 {
-            0% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            8.333% {
-                left: calc(0 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            16.67% {
-                left: calc(1 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            25.00% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            83.33% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            91.67% {
-                left: calc(1 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            100% {
-                left: calc(0 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-        }
-
-        @keyframes square3 {
-
-            0%,
-            100% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            16.67% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            25.00% {
-                left: calc(1 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            33.33% {
-                left: calc(2 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            41.67% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            66.67% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            75.00% {
-                left: calc(2 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            83.33% {
-                left: calc(1 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            91.67% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square4 {
-            0% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            33.33% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            41.67% {
-                left: calc(2 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            50.00% {
-                left: calc(3 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            58.33% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square5 {
-            0% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            50.00% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            58.33% {
-                left: calc(3 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            66.67% {
-                left: calc(2 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            75.00% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes squarefadein {
-            0% {
-                transform: scale(0.75);
-                opacity: 0.0;
-            }
-
-            100% {
-                transform: scale(1.0);
-                opacity: 1.0;
-            }
+        .cookies a {
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            padding: 6px 16px;
+            border: solid 1px #f68b1f;
         }
     </style>
     <!-- Topbar Start -->
@@ -352,19 +120,19 @@
                 <a href="#" class="navbar-brand ml-lg-3">
                     <img alt="constructionequipmentcentre" class="logo" src="./img/logo (1).png" style="width:200px" />
                 </a>
-                <button type="button" style="background-color: #ffc31d;box-shadow: 0px 2px 10px #ffc31d;"
-                    class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class=""
-                    style="display:flex;flex-direction: column;justify-content: flex-end;align-items: flex-end;">
+                <div class="nnn">
                     <div class="top-s">
-                        <small style="color: white;"><a href="tel:+919959997132"></a><i
-                                class="fa fa-phone-alt mr-2"></i>9959997132</a></small>
+                        <small class="top-ss"><a href="tel:+919959997132" class="top-ss"><i
+                                    class="fa fa-phone-alt mr-2"></i>9959997132</i></a></small>
                         <small class="px-3 t-line">|</small>
-                        <small style="color: white;"><i class="fa fa-envelope mr-2"
-                                style="word-break: break-all;"></i>constructionequipmentcentre@gmail.com</small>
+                        <small class="top-ss"><a href="mailto:constructionequipmentcentre@gmail.com" class="top-ss"><i
+                                    class="fa fa-envelope mr-2"
+                                    style="word-break: break-all;"></i>constructionequipmentcentre@gmail.com</a></small>
                     </div>
+                    <button type="button" style="background-color: #ffc31d;box-shadow: 0px 2px 10px #ffc31d;"
+                        class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="nav-links navbar-nav py-0">
                             <li><a href="#" class="nav-item nav-link active nav"> Home</a></li>
@@ -372,77 +140,45 @@
                                     About</a></li>
                             <li class="drop-down"><a href="products.html" class="nav-item nav-link  nav ">Products</a>
                                 <ul class="drop-items">
-                                    <li>Home</li>
-                                    <li>Home</li>
-                                    <li>Home</li>
-                                    <li>Home</li>
-                                    <li>Home</li>
-                                    <li>Home</li>
-                                    <li>Home</li>
-                                    <li>Home</li>
+
+                                    <li><a href="products.html">CEMENT TESTING EQUIMENTS</a></li>
+                                    <li><a href="products.html">SOIL TESTING</a></li>
+                                    <li><a href="products.html">AGGREGATE TESTING</a></li>
+                                    <li><a href="products.html">HONDA POWER TOOLS</a></li>
+                                    <li><a href="products.html">DEWALT POWER TOOLS</a></li>
+                                    <li>COMPRESSION TESTING MACHINE</li>
+                                    <li>TRUCKS</li>
+                                    <li>AUTO LEVEL</li>
+                                    <li>ALL EQUIPMENTS</li>
                                 </ul>
                             </li>
-                            <style>
-                                .nav-links li a {
-                                    /* color: white !important; */
-                                    cursor: pointer;
-                                }
 
-                                /* .nav-links li:hover a,
-                                .nav-links li a.active {
-                                    color: #ffc31d !important;
-                                    cursor: pointer;
-                                } */
-
-                                .drop-down {
-                                    position: relative;
-                                    transition: hover 2s all ease-in-out;
-                                }
-
-                                .drop-items {
-                                    position: absolute;
-                                    list-style-type: none;
-                                    background-color: #153662;
-                                    padding: 0;
-                                    top: 100%;
-                                    left: 40%;
-                                    padding-left: 5px;
-                                    padding-right: 5px;
-                                    display: none;
-                                }
-
-                                .drop-items li {
-                                    padding: 10px;
-                                    color: white;
-                                    cursor: pointer;
-                                }
-
-                                .drop-items li:hover {
-                                    color: #ffc31d;
-                                }
-
-                                .drop-down:hover .drop-items {
-                                    display: block;
-
-
-                                }
-                            </style>
                             <li><a href="gallery.html" class="nav-item nav-link nav">Gallery</a></li>
 
                             <li><a href="contact.html" class="nav-item nav-link  nav">Contact us</a></li>
                         </div>
-                        <!-- <a href="#appointment" class="btn btn-primary d-none d-lg-block nav" style="padding-left: 10px;">Book
-                        Now</a> -->
+
                     </div>
                 </div>
-
             </nav>
         </div>
         <!-- Navbar End -->
     </div>
-    <script>
+    <div class="cookies">
 
-    </script>
+        <div class="left">
+
+            <p><strong>Cookies on the CEC website</strong> : This site uses cookies to optimise your user experience. To
+                find out more about cookies, what cookies we use and how you can manage or remove them see our
+                <strong><u>cookie notice</u></strong>. If you continue without changing your settings, we'll assume that
+                you are happy to receive all cookies on the CEC website.
+            </p>
+
+        </div>
+
+        <div class="right"> <a href="javascript:;" class="close">OK</a> </div>
+
+    </div>
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5 walk">
@@ -459,41 +195,45 @@
                         src="img/slide-1.jpg" style="object-fit: cover;" loading="lazy">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                          
+
                             <h3 class="display-3 text-white mb-3 l text-uppercase heading-mask">
                                 construction<br>equipment centre</h3>
-                           
+
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
                                 href="contact.html">Contact Us</a>
                         </div>
                     </div>
                 </div>
                 <style>
-                     .heading-mask {
-            background: url('./img/about-img-1.jpg'); /* Replace with your image path or URL */
-            background-clip: text;
-            -webkit-background-clip: text; /* For older browsers */
-            color: transparent !important;
-            text-align: center;
-           
-            /* Adjust font size as needed */
-            line-height: 1.2;
-            margin: 0;
-            padding: 50px; /* Adjust padding as needed */
-            background-size: cover;
-            text-shadow: none !important;
-            font-weight: 900;
-        }
+                    .heading-mask {
+                        background: url('./img/about-img-1.jpg');
+                        /* Replace with your image path or URL */
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        /* For older browsers */
+                        color: transparent !important;
+                        text-align: center;
+
+                        /* Adjust font size as needed */
+                        line-height: 1.2;
+                        margin: 0;
+                        padding: 50px;
+                        /* Adjust padding as needed */
+                        background-size: cover;
+                        text-shadow: none !important;
+                        font-weight: 900;
+                    }
                 </style>
                 <div class="carousel-item position-relative Ci" style="min-height: 100vh;">
                     <img alt="constructionequipmentcentre" class="position-absolute w-100 h-100 cImg laptop"
                         src="img/slide-2.jpg" style="object-fit: cover;" loading="lazy">
-                   
+
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            
-                            <h3  class="display-3 text-uppercase text-white mb-3 heading-mask">construction<br>equipment centre</h3>
-                            
+
+                            <h3 class="display-3 text-uppercase text-white mb-3 heading-mask">construction<br>equipment
+                                centre</h3>
+
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
                                 href="contact.html">Contact Us</a>
                         </div>
@@ -502,12 +242,13 @@
                 <div class="carousel-item position-relative Ci" style="min-height: 100vh;">
                     <img alt="constructionequipmentcentre" class="position-absolute w-100 h-100 cImg laptop"
                         src="img/slide-3.jpg" style="object-fit: cover;">
-                    
+
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            
-                            <h3 class="display-3 text-uppercase text-white mb-3 heading-mask ">construction<br>equipment centre</h3>
-                            
+
+                            <h3 class="display-3 text-uppercase text-white mb-3 heading-mask ">construction<br>equipment
+                                centre</h3>
+
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
                                 href="contact.html">Contact Us</a>
                         </div>
@@ -516,12 +257,13 @@
                 <div class="carousel-item position-relative Ci" style="min-height: 100vh;">
                     <img alt="constructionequipmentcentre" class="position-absolute w-100 h-100 cImg laptop"
                         src="img/slide-4.jpg" style="object-fit: cover;">
-                   
+
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                           
-                            <h3 class="display-3 text-uppercase text-white mb-3 heading-mask">construction<br>equipment centre</h3>
-                            
+
+                            <h3 class="display-3 text-uppercase text-white mb-3 heading-mask">construction<br>equipment
+                                centre</h3>
+
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
                                 href="contact.html">Contact Us</a>
                         </div>
@@ -1071,6 +813,9 @@
 
 
     <!-- JavaScript Libraries -->
+    <!-- <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/6.1.4/jquery.mmenu.all.js"></script> -->
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -1093,7 +838,40 @@
         AOS.init();
     </script>
 
+    <script>
 
+        $(".close").click(function () {
+            createCookie("Cookie", "1", "1");
+            $(".cookies").slideToggle();
+        });
+        checkCookie();
+
+
+        function createCookie(cookieName, cookieValue, daysToExpire) {
+            var date = new Date();
+            date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
+            document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+        }
+        function accessCookie(cookieName) {
+            var name = cookieName + "=";
+            var allCookieArray = document.cookie.split(';');
+            for (var i = 0; i < allCookieArray.length; i++) {
+                var temp = allCookieArray[i].trim();
+                if (temp.indexOf(name) == 0)
+                    return temp.substring(name.length, temp.length);
+            }
+            return "";
+        }
+        function checkCookie() {
+            var user = accessCookie("Cookie");
+            if (user != "") {
+                $(".cookies").hide();
+            }
+            else {
+                $(".cookies").show();
+            }
+        }
+    </script>
 
 
 </body>
