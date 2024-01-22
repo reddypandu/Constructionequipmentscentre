@@ -304,10 +304,13 @@
         }
     </style>
     <!-- Topbar Start -->
-    <div class="top-navbar">
-        <div class="container-fluid d-lg-block" style="background-color: transparent;padding: 0;">
+    <div class="top-navbar pt-3 pb-3">
+        <!-- <div class="container-fluid d-lg-block" style="background-color: transparent;padding: 0;">
             <div class="row py-2 px-lg-5">
                 <div class="col-lg-6 text-left mb-2 mb-lg-0">
+                    
+                </div>
+                <div class="col-lg-6 text-right">
                     <div class="top-s">
                         <small style="color: white;"><a href="tel:+919959997132"></a><i
                                 class="fa fa-phone-alt mr-2"></i>9959997132</a></small>
@@ -315,8 +318,6 @@
                         <small style="color: white;"><i class="fa fa-envelope mr-2"
                                 style="word-break: break-all;"></i>constructionequipmentcentre@gmail.com</small>
                     </div>
-                </div>
-                <div class="col-lg-6 text-right">
                     <div class="d-inline-flex align-items-center">
                         <a class="text-primary px-2" href="tel:+919959997132"><i class="fas fa-phone-alt"
                                 style="color: #ffc31d;"></i></a>
@@ -333,7 +334,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Topbar End -->
 
         <style>
@@ -355,19 +356,86 @@
                     class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-                    <div class="nav-links navbar-nav py-0">
-                        <a href="#" class="nav-item nav-link active nav">Home</a>
-                        <a href="about.html" class="nav-item nav-link nav">About</a>
-                        <a href="products.html" class="nav-item nav-link nav">Products</a>
-
-                        <a href="gallery.html" class="nav-item nav-link nav">Gallery</a>
-
-                        <a href="contact.html" class="nav-item nav-link nav">Contact us</a>
+                <div class=""
+                    style="display:flex;flex-direction: column;justify-content: flex-end;align-items: flex-end;">
+                    <div class="top-s">
+                        <small style="color: white;"><a href="tel:+919959997132"></a><i
+                                class="fa fa-phone-alt mr-2"></i>9959997132</a></small>
+                        <small class="px-3 t-line">|</small>
+                        <small style="color: white;"><i class="fa fa-envelope mr-2"
+                                style="word-break: break-all;"></i>constructionequipmentcentre@gmail.com</small>
                     </div>
-                    <!-- <a href="#appointment" class="btn btn-primary d-none d-lg-block nav" style="padding-left: 10px;">Book
-                    Now</a> -->
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="nav-links navbar-nav py-0">
+                            <li><a href="#" class="nav-item nav-link active nav"> Home</a></li>
+                            <li><a href="about.html" class="nav-item nav-link  nav">
+                                    About</a></li>
+                            <li class="drop-down"><a href="products.html" class="nav-item nav-link  nav ">Products</a>
+                                <ul class="drop-items">
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </li>
+                            <style>
+                                .nav-links li a {
+                                    /* color: white !important; */
+                                    cursor: pointer;
+                                }
+
+                                /* .nav-links li:hover a,
+                                .nav-links li a.active {
+                                    color: #ffc31d !important;
+                                    cursor: pointer;
+                                } */
+
+                                .drop-down {
+                                    position: relative;
+                                    transition: hover 2s all ease-in-out;
+                                }
+
+                                .drop-items {
+                                    position: absolute;
+                                    list-style-type: none;
+                                    background-color: #153662;
+                                    padding: 0;
+                                    top: 100%;
+                                    left: 40%;
+                                    padding-left: 5px;
+                                    padding-right: 5px;
+                                    display: none;
+                                }
+
+                                .drop-items li {
+                                    padding: 10px;
+                                    color: white;
+                                    cursor: pointer;
+                                }
+
+                                .drop-items li:hover {
+                                    color: #ffc31d;
+                                }
+
+                                .drop-down:hover .drop-items {
+                                    display: block;
+
+
+                                }
+                            </style>
+                            <li><a href="gallery.html" class="nav-item nav-link nav">Gallery</a></li>
+
+                            <li><a href="contact.html" class="nav-item nav-link  nav">Contact us</a></li>
+                        </div>
+                        <!-- <a href="#appointment" class="btn btn-primary d-none d-lg-block nav" style="padding-left: 10px;">Book
+                        Now</a> -->
+                    </div>
                 </div>
+
             </nav>
         </div>
         <!-- Navbar End -->
