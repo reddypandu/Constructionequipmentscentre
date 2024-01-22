@@ -64,7 +64,7 @@ body {
   line-height: 1.5;
   color: #757575;
   text-align: left;
-  background-color: white;
+  background-color: rgb(44, 44, 44);
   /* background-image: linear-gradient(90deg, white 20%, #ffc31d 30%, #153662 50%); */
 }
 
@@ -478,7 +478,7 @@ h6,
 }
 
 .display-3 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 300;
   line-height: 1.2;
   text-shadow: 2px -4px 3px black;
@@ -562,7 +562,7 @@ mark,
 .whatsapp {
   position: fixed;
   bottom: 10px;
-  left: 10px;
+  right: 25px;
   font-size: 25px;
   background-color: #ffc31d;
   border-radius: 50%;
@@ -4387,7 +4387,7 @@ input[type="button"].btn-block {
   z-index: 999;
   width: 100%;
   padding-bottom: 20px;
-  background-color: #153662 !important;
+  background-color: black !important;
 }
 
 .navbar .container,
@@ -4837,7 +4837,7 @@ input[type="button"].btn-block {
 .drop-items {
   position: absolute;
   list-style-type: none;
-  background-color: #153662;
+  background-color: black;
   padding: 0;
   top: 100%;
   left: 20%;
@@ -4849,12 +4849,13 @@ input[type="button"].btn-block {
 
 .drop-items li {
   padding: 10px;
-  color: white;
   cursor: pointer;
   border-bottom: 1px solid white;
 }
-
-.drop-items li:hover {
+.drop-items li a {
+  color: white;
+}
+.drop-items li:hover a {
   color: #ffc31d;
 }
 
@@ -10284,9 +10285,30 @@ h6,
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: rgba(33, 30, 28, 0.5);
+  bottom: -8%;
+  background: rgba(33, 30, 28, 0.2);
   z-index: 1;
+}
+.carousel-caption .hometitle {
+  width: 100%;
+  position: relative;
+  background-color: white;
+  /* For browsers that do not support gradients */
+  /* background-image: repeating-linear-gradient(-45.2deg, white 10px, white 185px, #FFC31D 100px, #FFC31D 400px); */
+
+  /* background-image: url("/img/photo-1533891244820-1d2dbcf93f56.png"); */
+}
+/* background: red; */
+.carousel-caption .hometitle .overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.carousel-caption .hometitle h3 {
+  color: #153662 !important;
 }
 
 .service-item img {
