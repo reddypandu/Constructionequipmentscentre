@@ -64,7 +64,7 @@ body {
   line-height: 1.5;
   color: #757575;
   text-align: left;
-  background-color: rgb(44, 44, 44);
+  background-color: rgb(20, 20, 20);
   /* background-image: linear-gradient(90deg, white 20%, #ffc31d 30%, #153662 50%); */
 }
 
@@ -91,6 +91,7 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 abbr[title],
@@ -508,7 +509,13 @@ hr {
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+.mm {
+  height: 550px;
+}
 
+.mm img {
+  height: 100%;
+}
 small,
 .small {
   font-size: 80%;
@@ -4250,8 +4257,7 @@ input[type="button"].btn-block {
     position: absolute;
     z-index: 999;
   }
-  .walk {
-  }
+
   .walk .mobile {
     display: block;
   }
@@ -4442,22 +4448,7 @@ input[type="button"].btn-block {
   justify-content: center;
   align-items: center;
   visibility: hidden;
-  /* width: 96px;
-  height: 96px;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.9);
-  -webkit-box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.24);
-  box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.24);
-  border-radius: 16px;
-  opacity: 0;
-  
-  -webkit-transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
-  -o-transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
-  transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;*/
+
   z-index: 1000;
 }
 
@@ -8013,6 +8004,7 @@ button.bg-dark:focus {
 
 .m-0 {
   margin: 0 !important;
+  color: white !important;
 }
 
 .mt-0,
@@ -9253,22 +9245,12 @@ button.bg-dark:focus {
   .p-lg-0 {
     padding: 0 !important;
   }
-  .pt-lg-0,
-  .py-lg-0 {
-    /* padding-top: 0 !important; */
-  }
+
   .pr-lg-0,
   .px-lg-0 {
     padding-right: 0 !important;
   }
-  .pb-lg-0,
-  .py-lg-0 {
-    /* padding-bottom: 0 !important; */
-  }
-  .pl-lg-0,
-  .px-lg-0 {
-    /* padding-left: 0 !important; */
-  }
+
   .p-lg-1 {
     padding: 0.25rem !important;
   }
@@ -10286,13 +10268,13 @@ h6,
   left: 0;
   right: 0;
   bottom: -8%;
-  background: rgba(33, 30, 28, 0.2);
+  /* background: rgba(33, 30, 28, 0.2); */
   z-index: 1;
 }
 .carousel-caption .hometitle {
   width: 100%;
   position: relative;
-  background-color: white;
+  background-color: #fff;
   /* For browsers that do not support gradients */
   /* background-image: repeating-linear-gradient(-45.2deg, white 10px, white 185px, #FFC31D 100px, #FFC31D 400px); */
 
@@ -10305,7 +10287,7 @@ h6,
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 .carousel-caption .hometitle h3 {
   color: #153662 !important;
@@ -10452,7 +10434,7 @@ h6,
     height: 100%;
     top: 0;
     left: 50%;
-    background: rgba(255, 255, 255, 0.15);
+    background: #ffc31d;
   }
 }
 

@@ -25,6 +25,7 @@
     <link href="css/style.css" rel="stylesheet">
     <!--book table script-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
     <script type="text/javascript">
         (function () {
             // https://dashboard.emailjs.com/admin/account
@@ -48,290 +49,11 @@
         </div>
     </div>
     <!--loader-->
-    <style>
-        .loadingspinner {
-            --square: 26px;
-            --offset: 30px;
-            --duration: 2.4s;
-            --delay: 0.2s;
-            --timing-function: ease-in-out;
-            --in-duration: 0.4s;
-            --in-delay: 0.1s;
-            --in-timing-function: ease-out;
-            width: calc(3 * var(--offset) + var(--square));
-            height: calc(2 * var(--offset) + var(--square));
-            padding: 0px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 10px;
-            margin-bottom: 30px;
-            position: relative;
-        }
 
-        .loadingspinner div {
-            display: inline-block;
-            background: #ffc31d;
-            /*background: var(--text-color);*/
-            /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
-            border: none;
-            border-radius: 2px;
-            width: var(--square);
-            height: var(--square);
-            position: absolute;
-            padding: 0px;
-            margin: 0px;
-            font-size: 6pt;
-            color: black;
-        }
-
-        .loadingspinner #square1 {
-            left: calc(0 * var(--offset));
-            top: calc(0 * var(--offset));
-            animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square2 {
-            left: calc(0 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square3 {
-            left: calc(1 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square4 {
-            left: calc(2 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square5 {
-            left: calc(3 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        @keyframes square1 {
-            0% {
-                left: calc(0 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            8.333% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square2 {
-            0% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            8.333% {
-                left: calc(0 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            16.67% {
-                left: calc(1 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            25.00% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            83.33% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            91.67% {
-                left: calc(1 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            100% {
-                left: calc(0 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-        }
-
-        @keyframes square3 {
-
-            0%,
-            100% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            16.67% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            25.00% {
-                left: calc(1 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            33.33% {
-                left: calc(2 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            41.67% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            66.67% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            75.00% {
-                left: calc(2 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            83.33% {
-                left: calc(1 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            91.67% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square4 {
-            0% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            33.33% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            41.67% {
-                left: calc(2 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            50.00% {
-                left: calc(3 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            58.33% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square5 {
-            0% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            50.00% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            58.33% {
-                left: calc(3 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            66.67% {
-                left: calc(2 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            75.00% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes squarefadein {
-            0% {
-                transform: scale(0.75);
-                opacity: 0.0;
-            }
-
-            100% {
-                transform: scale(1.0);
-                opacity: 1.0;
-            }
-        }
-    </style>
 
     <!-- Navbar Start -->
+    <!-- Topbar Start -->
     <div class="top-navbar pt-3 pb-3">
-        <!-- <div class="container-fluid d-lg-block" style="background-color: transparent;padding: 0;">
-            <div class="row py-2 px-lg-5">
-                <div class="col-lg-6 text-left mb-2 mb-lg-0">
-                    
-                </div>
-                <div class="col-lg-6 text-right">
-                    <div class="top-s">
-                        <small style="color: white;"><a href="tel:+919959997132"></a><i
-                                class="fa fa-phone-alt mr-2"></i>9959997132</a></small>
-                        <small class="px-3 t-line">|</small>
-                        <small style="color: white;"><i class="fa fa-envelope mr-2"
-                                style="word-break: break-all;"></i>constructionequipmentcentre@gmail.com</small>
-                    </div>
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-2" href="tel:+919959997132"><i class="fas fa-phone-alt"
-                                style="color: #ffc31d;"></i></a>
-                        <a class="text-primary px-2" href="https://www.facebook.com/constructionequipmentcentre">
-                            <i class="fab fa-facebook-f" style="color: #ffc31d;"></i>
-                        </a>
-                        <a class="text-primary px-2"
-                            href="https://www.google.com/maps/place/T19+TOWER,+5-4-187%2F6,+Mahatma+Gandhi+Rd,+Karbala+Maidan,+Rani+Gunj,+Secunderabad,+Hyderabad,+Telangana+500003/@17.4288818,78.4873752,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9a1d4515d831:0xbddd57a426729de6!8m2!3d17.4288818!4d78.4873752?authuser=0&entry=ttu">
-                            <i class="fas fa-map-marker-alt" style="color: #ffc31d;"></i>
-                        </a>
-                        <a class="text-primary px-2" href="https://www.instagram.com/constructionequipmentcentre">
-                            <i class="fab fa-instagram" style="color: #ffc31d;"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Topbar End -->
 
         <style>
             .top-navbar {
@@ -340,6 +62,8 @@
                 left: 0;
                 z-index: 999;
                 width: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                box-shadow: inset 2px 3px 5px black;
             }
         </style>
         <!-- Navbar Start -->
@@ -363,22 +87,22 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="nav-links navbar-nav py-0">
-                            <li><a href="index.html" class="nav-item nav-link  nav"> Home</a></li>
+                            <li><a href="index.html" class="nav-item nav-link nav"> Home</a></li>
                             <li><a href="about.html" class="nav-item nav-link  nav">
                                     About</a></li>
                             <li class="drop-down"><a href="products.html"
-                                    class="nav-item nav-link active nav ">Products</a>
+                                    class="nav-item nav-link  nav active">Products</a>
                                 <ul class="drop-items">
 
-                                    <li>CEMENT TESTING EQUIMENTS</li>
-                                    <li>SOIL TESTING</li>
-                                    <li>AGGREGATE TESTING</li>
-                                    <li>HONDA POWER TOOLS</li>
-                                    <li>DEWALT POWER TOOLS</li>
-                                    <li>COMPRESSION TESTING MACHINE</li>
-                                    <li>TRUCKS</li>
-                                    <li>AUTO LEVEL</li>
-                                    <li>ALL EQUIPMENTS</li>
+                                    <li><a href="products.html">CEMENT TESTING EQUIMENTS</a></li>
+                                    <li><a href="products.html">SOIL TESTING</a></li>
+                                    <li><a href="products.html">AGGREGATE TESTING</a></li>
+                                    <li><a href="products.html">HONDA POWER TOOLS</a></li>
+                                    <li><a href="products.html">DEWALT POWER TOOLS</a></li>
+                                    <li><a href="products.html">COMPRESSION TESTING MACHINE</a></li>
+                                    <li><a href="products.html">TRUCKS</a></li>
+                                    <li><a href="products.html">AUTO LEVEL</a></li>
+                                    <li><a href="products.html">ALL EQUIPMENTS</a></li>
                                 </ul>
                             </li>
 
@@ -418,8 +142,243 @@ whatsapp logo
     </div>
     <!-- Header End -->
 
+    <div class="container">
+        <div class="wrap">
+            <div class="title">&nbsp; <div class="crane_icons"><img
+                        src="https://www.ace-cranes.com/public/front/images/crane-icon.png" alt=""></div>
+            </div>
+            <div class="clr"></div>
+            <!--left pannel start-->
+
+            <div class="left_area equipment-area">
+                <h2><span>Equipment </span></h2>
+                <div class="left-nav-dropdown" style="display: none;">
+                    <a href="javascript:;"><img src="https://www.ace-cranes.com/public/front/images/but_menu.png"
+                            alt="ACE" border="0"></a>
+                </div>
+                <div class="gry_box" id="menu_id">
 
 
+                    <div class="menu_holder">
+                        <nav>
+                            <ul style="">
+
+                                <li class="act_sub foo" data-filter-btn="Mobile1">
+                                    Mobile1 Cranes
+
+
+
+                                </li>
+                                <li class="act_sub foo" data-filter-btn="Mobile2">
+                                    <p class="preview activ active1"> Mobile2 Cranes
+
+                                    </p>
+                                </li>
+                                <li class="act_sub foo" data-filter-btn="Mobile3">
+                                    Mobile3 Cranes
+
+
+                                </li>
+                                <li class="act_sub foo" data-filter-btn="Mobile4">
+                                    Mobile4 Cranes
+
+
+
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul>
+        <li data-filter="Mobile1">
+            Mobile2
+        </li>
+        <li data-filter="Mobile2">
+            Mobile1
+        </li>
+        <li data-filter="Mobile3">
+            Mobile3
+        </li>
+        <li data-filter="Mobile4">
+            Mobile4
+        </li>
+    </ul>
+    <section class="section pricing has-bg-image has-before" id="pricing" aria-label="pricing"
+        style="background-image: url('./assets/images/pricing-bg.jpg')">
+        <div class="container">
+
+            <h2 class="h2 section-title text-center">Awesome Pricing Plan</h2>
+
+            <p class="section-text text-center">
+                <!-- Sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt labore dolore magna aliqua suspendisse -->
+            </p>
+
+            <div class="pricing-tab-container">
+
+                <ul class="tab-filter">
+
+                    <li>
+                        <button class="filter-btn active" data-filter-btn="all">
+                            <div class="btn-icon">
+                                <i class="flaticon-beauty-salon" aria-hidden="true"></i>
+                            </div>
+
+                            <p class="btn-text">All Pricing</p>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="filter-btn" data-filter-btn="beauty-spa">
+                            <div class="btn-icon">
+                                <i class="flaticon-relax" aria-hidden="true"></i>
+                            </div>
+
+                            <p class="btn-text">Beauty & Spa</p>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="filter-btn" data-filter-btn="body-treatments">
+                            <div class="btn-icon">
+                                <i class="flaticon-massage" aria-hidden="true"></i>
+                            </div>
+
+                            <p class="btn-text">Body Treatments</p>
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="filter-btn" data-filter-btn="face-washing">
+                            <div class="btn-icon">
+                                <i class="flaticon-spa" aria-hidden="true"></i>
+                            </div>
+
+                            <p class="btn-text">Face Washing</p>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <ul class="grid-list">
+
+        <li data-filter="shaving">
+            <div class="pricing-card">
+
+                <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing-1.jpg" width="90" height="90" alt="Hair Cutting & Fitting"
+                        class="img-cover">
+                </figure>
+
+                <div class="wrapper">
+                    <h3 class="h3 card-title">Hair Cutting & Fitting</h3>
+
+                    <p class="card-text">1 Male</p>
+                </div>
+
+                <data class="card-price" value="89">₹449</data>
+            </div>
+        </li>
+
+        <li data-filter="shaving">
+            <div class="pricing-card">
+
+                <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing-2.jpg" width="90" height="90" alt="Shaving & Facial"
+                        class="img-cover">
+                </figure>
+
+                <div class="wrapper">
+                    <h3 class="h3 card-title">L'Oreal Hair Color</h3>
+
+                    <p class="card-text">1 Male</p>
+                </div>
+
+                <data class="card-price" value="45">₹899</data>
+
+            </div>
+        </li>
+
+        <li data-filter="face-washing">
+            <div class="pricing-card">
+
+                <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing-3.jpg" width="90" height="90" alt="Hair Color & Wash"
+                        class="img-cover">
+                </figure>
+
+                <div class="wrapper">
+                    <h3 class="h3 card-title"> L'oreal Global Hair Color (Medium Length)</h3>
+
+                    <p class="card-text">1 Female</p>
+                </div>
+
+                <data class="card-price" value="35">₹3,499</data>
+
+            </div>
+        </li>
+
+        <li data-filter="body-treatments">
+            <div class="pricing-card">
+
+                <figure class="card-banner img-holder" style="--width: 90; --height: 90;">
+                    <img src="./assets/images/pricing-4.jpg" width="90" height="90" alt="Body Massage"
+                        class="img-cover">
+                </figure>
+
+                <div class="wrapper">
+                    <h3 class="h3 card-title">Full Body Polishing + Full Body De-Tan</h3>
+
+                    <p class="card-text">1 Person</p>
+                </div>
+
+                <data class="card-price" value="56">₹4,999</data>
+
+            </div>
+        </li>
+    </ul>
+    <script>
+        /**
+  * filter function
+  */const addEventOnElem = function (elem, type, callback) {
+            if (elem.length > 1) {
+                for (let i = 0; i < elem.length; i++) {
+                    elem[i].addEventListener(type, callback);
+                }
+            } else {
+                elem.addEventListener(type, callback);
+            }
+        };
+
+        const filterBtns = document.querySelectorAll("[data-filter-btn]");
+        const filterItems = document.querySelectorAll("[data-filter]");
+
+        let lastClickedFilterBtn = filterBtns[0];
+
+        const filter = function () {
+            lastClickedFilterBtn.classList.remove("active");
+            this.classList.add("active");
+            lastClickedFilterBtn = this;
+
+            for (let i = 0; i < filterItems.length; i++) {
+                if (
+                    this.dataset.filterBtn === filterItems[i].dataset.filter ||
+                    this.dataset.filterBtn === "all"
+                ) {
+                    filterItems[i].style.display = "block";
+                    filterItems[i].classList.add("active");
+                } else {
+                    filterItems[i].style.display = "none";
+                    filterItems[i].classList.remove("active");
+                }
+            }
+        };
+
+        addEventOnElem(filterBtns, "click", filter);
+    </script>
     <main>
         <div class="category" id="category1 QCLABTESTINGEQUIPMENTS">
             <h2 class="product-heading"> QC LAB TESTING
@@ -622,6 +581,14 @@ whatsapp logo
             display: none;
         }
 
+        .section.why .container.c {
+            color: white;
+        }
+
+        .section.why a {
+            color: white;
+        }
+
         .list-info {
             padding: 0;
         }
@@ -813,32 +780,239 @@ whatsapp logo
 
 
 
-    <!-- Pricing Start women -->
-    <h2 class="text-center p-3">Products</h2>
-    <div class="container-fluid bg-pricing">
-
-        <div class="container">
+    <h3 class="text-center">Our Products</h3>
+    <div class="container-fluid py-5 g">
+        <div class="container pt-5">
             <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5 ">
+                        <img class="img-fluid im" src="img/2023-07-28 (1).webp" alt="" style="object-fit:contain;">
 
-                <div class="col-lg-12 pt-5 pb-lg-5" data-aos="fade-up">
-                    <div class="pricing-text bg-light p-4 p-lg-5 my-lg-5">
-                        <div class="owl-carousel pricing-carousel">
-                            <img src="./img/slide-1.jpg" alt="constructionequipmentcentre" />
-                            <img src="./img/slide-2.jpg" alt="constructionequipmentcentre" />
-                            <img src="./img/slide-3.jpg" alt="constructionequipmentcentre" />
-                            <img src="./img/slide-4.jpg" alt="constructionequipmentcentre" />
+                        <div class="imt">
+                            <p>Auto Level</p>
+                        </div>
 
+                    </div>
+                </div>
+                <style>
+                    .team .im {
+                        position: relative;
+
+                    }
+
+                    .team .imt {
+                        position: absolute;
+                        width: 80%;
+                        top: 50%;
+                        left: 50%;
+                        text-align: center;
+                        transform: translate(-50%, -50%);
+                        border: 5px solid rgba(44, 43, 43, 0.61);
+                        z-index: 999;
+                        background-color: rgba(0, 0, 0, 0.426);
+                        display: none;
+                        animation: d 0.8s linear 1;
+                    }
+
+                    @keyframes d {
+                        0% {
+                            top: 0%;
+                            opacity: 0.1;
+                        }
+
+                        50% {
+                            top: 25%;
+                            opacity: 0.5;
+                        }
+
+                        100% {
+                            top: 50%;
+                            opacity: 1;
+                        }
+                    }
+
+                    .team .imt p {
+                        color: white;
+                        font-weight: 700;
+                        font-size: 20px;
+                        padding: 5px;
+                        margin: 0;
+                    }
+
+                    .g img {
+                        margin: 5px;
+                    }
+
+                    .team:hover img {
+                        opacity: 0.8;
+                    }
+
+                    .team:hover .imt {
+                        display: block;
+                    }
+                </style>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/2023-07-28 (2).webp" alt="">
+                        <div class="imt">
+                            <p>Roado Meter</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/2023-07-28.webp" alt="">
+                        <div class="imt">
+                            <p>Survey instrument</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/2023-08-10.webp" alt="">
+                        <div class="imt">
+                            <p>Sokkia instrument B40A</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/2023-08-17.webp" alt="">
+                        <div class="imt">
+                            <p>Staff for Survey instrument</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/2023-08-21.webp" alt="">
+                        <div class="imt">
+                            <p>Total Station</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/69790440-product-1700560400656-250x250.webp" alt="">
+                        <div class="imt">
+                            <p>Cube Mould</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/69790440-product-1700560424007-250x250.webp" alt="">
+                        <div class="imt">
+                            <p>
+
+                                Brass Sleeve</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/cast-iron-mold-250x250 (1).jpg" alt="">
+                        <div class="imt">
+                            <p>Cast Iron Mold</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/civil-lab-equipment-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>Civil Lab Equipment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/compression-testing-machine-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>Compression Testing Machine</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/concrete-mold-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>Concrete Mold</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/concrete-testing-equipment-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>Concrete Testing Equipment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/cube-mould-50mm-250x250.webp" alt="">
+                        <div class="imt">
+                            <p>Concrete Cube Moulds</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/cube-mould-three-gang-125x125.webp" alt="">
+                        <div class="imt">
+                            <p>Roado Meter</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/cube-moulds-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>Cube Mould 150mm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/industrial-molds-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>
+                                Industrial Molds</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/land-surveying-instruments-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>Land Surveying Instruments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/laser-levels-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>Dewalt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team position-relative overflow-hidden mb-5">
+                        <img class="img-fluid im" src="img/level-instruments-250x250.jpg" alt="">
+                        <div class="imt">
+                            <p>Level Instruments</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Pricing End women -->
     <!-- Testimonial Start -->
     <div class="container-fluid py-2">
         <div class="container py-5">
-            <div class="row align-items-center">
+            <div class="row align-items-center" style="box-shadow: inset 2px 2px 2px white;">
                 <!-- <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-up">
                    
                     <img alt="constructionequipmentcentre" class="img-fluid w-100" src="img/slide-1.jpg">
@@ -858,8 +1032,9 @@ whatsapp logo
                                     <span>- Head of Operations</span>
                                 </div>
                             </div>
-                            <p class="m-0 text-dark pl-3">The Construction Equipment Centre provided top-notch
-                                machinery that elevated our project efficiency, delivering quality equipment on time,
+                            <p class="m-0 text-white pl-3">The Construction Equipment Centre provided top-notch
+                                machinery that elevated our project efficiency, delivering quality equipment on
+                                time,
                                 every time.
                             </p>
                         </div>
@@ -874,7 +1049,8 @@ whatsapp logo
                                     <span>-Project Manager</span>
                                 </div>
                             </div>
-                            <p class="m-0 text-dark">Exceptional service and a diverse range of reliable construction
+                            <p class="m-0 text-white">Exceptional service and a diverse range of reliable
+                                construction
                                 equipment make Construction Equipment Centre our go-to partner for all our project
                                 needs.
                             </p>
@@ -890,7 +1066,7 @@ whatsapp logo
                                     <span>-Construction Manager</span>
                                 </div>
                             </div>
-                            <p class="m-0 text-dark">Reliability and professionalism define our experience with
+                            <p class="m-0 text-white">Reliability and professionalism define our experience with
                                 Construction Equipment Centre; their well-maintained fleet and knowledgeable staff
                                 ensure seamless construction operations.
                             </p>
@@ -906,8 +1082,10 @@ whatsapp logo
                                     <span>-Civil Engineer</span>
                                 </div>
                             </div>
-                            <p class="m-0 text-dark">Choosing Construction Equipment Centre was a game-changer for us.
-                                Their state-of-the-art machinery and responsive service significantly contributed to the
+                            <p class="m-0 text-white">Choosing Construction Equipment Centre was a game-changer for
+                                us.
+                                Their state-of-the-art machinery and responsive service significantly contributed to
+                                the
                                 success of our construction endeavors.
                             </p>
                         </div>
@@ -929,7 +1107,7 @@ whatsapp logo
         }
     </style>
     <!-- Footer Start -->
-    <div class="footer container-fluid position-relative py-2 pl-4" style="margin-top: 90px;background-color: #153662;"
+    <div class="footer container-fluid position-relative py-2 pl-4" style="margin-top: 90px;background-color:black;"
         id="footer">
         <div class="container">
             <div class="row">
@@ -998,8 +1176,7 @@ whatsapp logo
             </div>
         </div>
     </div>
-    <div class="container-fluid text-light border-top py-4"
-        style="border-color: rgba(256, 256, 256, .15) !important;background-color: #153662;">
+    <div class="container-fluid text-light  py-4" style="background-color: black;border-top: 1px solid #ffc31d;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">

@@ -40,258 +40,10 @@
         </div>
     </div>
     <!--loader-->
-    <style>
-        .loadingspinner {
-            --square: 26px;
-            --offset: 30px;
-            --duration: 2.4s;
-            --delay: 0.2s;
-            --timing-function: ease-in-out;
-            --in-duration: 0.4s;
-            --in-delay: 0.1s;
-            --in-timing-function: ease-out;
-            width: calc(3 * var(--offset) + var(--square));
-            height: calc(2 * var(--offset) + var(--square));
-            padding: 0px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 10px;
-            margin-bottom: 30px;
-            position: relative;
-        }
 
-        .loadingspinner div {
-            display: inline-block;
-            background: #ffc31d;
-            /*background: var(--text-color);*/
-            /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);*/
-            border: none;
-            border-radius: 2px;
-            width: var(--square);
-            height: var(--square);
-            position: absolute;
-            padding: 0px;
-            margin: 0px;
-            font-size: 6pt;
-            color: black;
-        }
-
-        .loadingspinner #square1 {
-            left: calc(0 * var(--offset));
-            top: calc(0 * var(--offset));
-            animation: square1 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square2 {
-            left: calc(0 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square2 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square3 {
-            left: calc(1 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square3 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square4 {
-            left: calc(2 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square4 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        .loadingspinner #square5 {
-            left: calc(3 * var(--offset));
-            top: calc(1 * var(--offset));
-            animation: square5 var(--duration) var(--delay) var(--timing-function) infinite,
-                squarefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
-        }
-
-        @keyframes square1 {
-            0% {
-                left: calc(0 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            8.333% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square2 {
-            0% {
-                left: calc(0 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            8.333% {
-                left: calc(0 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            16.67% {
-                left: calc(1 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            25.00% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            83.33% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            91.67% {
-                left: calc(1 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            100% {
-                left: calc(0 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-        }
-
-        @keyframes square3 {
-
-            0%,
-            100% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            16.67% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            25.00% {
-                left: calc(1 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            33.33% {
-                left: calc(2 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            41.67% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            66.67% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            75.00% {
-                left: calc(2 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            83.33% {
-                left: calc(1 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            91.67% {
-                left: calc(1 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square4 {
-            0% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            33.33% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            41.67% {
-                left: calc(2 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            50.00% {
-                left: calc(3 * var(--offset));
-                top: calc(2 * var(--offset));
-            }
-
-            58.33% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes square5 {
-            0% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            50.00% {
-                left: calc(3 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            58.33% {
-                left: calc(3 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            66.67% {
-                left: calc(2 * var(--offset));
-                top: calc(0 * var(--offset));
-            }
-
-            75.00% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-
-            100% {
-                left: calc(2 * var(--offset));
-                top: calc(1 * var(--offset));
-            }
-        }
-
-        @keyframes squarefadein {
-            0% {
-                transform: scale(0.75);
-                opacity: 0.0;
-            }
-
-            100% {
-                transform: scale(1.0);
-                opacity: 1.0;
-            }
-        }
-    </style>
 
     <!-- Navbar Start -->
+    <!-- Topbar Start -->
     <div class="top-navbar pt-3 pb-3">
         <!-- <div class="container-fluid d-lg-block" style="background-color: transparent;padding: 0;">
             <div class="row py-2 px-lg-5">
@@ -332,6 +84,8 @@
                 left: 0;
                 z-index: 999;
                 width: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                box-shadow: inset 2px 3px 5px black;
             }
         </style>
         <!-- Navbar Start -->
@@ -355,21 +109,21 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="nav-links navbar-nav py-0">
-                            <li><a href="index.html" class="nav-item nav-link  nav"> Home</a></li>
+                            <li><a href="index.html" class="nav-item nav-link nav"> Home</a></li>
                             <li><a href="about.html" class="nav-item nav-link  nav active">
                                     About</a></li>
                             <li class="drop-down"><a href="products.html" class="nav-item nav-link  nav ">Products</a>
                                 <ul class="drop-items">
 
-                                    <li>CEMENT TESTING EQUIMENTS</li>
-                                    <li>SOIL TESTING</li>
-                                    <li>AGGREGATE TESTING</li>
-                                    <li>HONDA POWER TOOLS</li>
-                                    <li>DEWALT POWER TOOLS</li>
-                                    <li>COMPRESSION TESTING MACHINE</li>
-                                    <li>TRUCKS</li>
-                                    <li>AUTO LEVEL</li>
-                                    <li>ALL EQUIPMENTS</li>
+                                    <li><a href="products.html">CEMENT TESTING EQUIMENTS</a></li>
+                                    <li><a href="products.html">SOIL TESTING</a></li>
+                                    <li><a href="products.html">AGGREGATE TESTING</a></li>
+                                    <li><a href="products.html">HONDA POWER TOOLS</a></li>
+                                    <li><a href="products.html">DEWALT POWER TOOLS</a></li>
+                                    <li><a href="products.html">COMPRESSION TESTING MACHINE</a></li>
+                                    <li><a href="products.html">TRUCKS</a></li>
+                                    <li><a href="products.html">AUTO LEVEL</a></li>
+                                    <li><a href="products.html">ALL EQUIPMENTS</a></li>
                                 </ul>
                             </li>
 
@@ -417,7 +171,7 @@
             color: white;
         }
 
-        button:hover {}
+
 
         button:hover::before {
             -webkit-animation: sh02 0.5s 0s linear;
@@ -483,16 +237,16 @@
                     <img alt="constructionequipmentcentre" class="img-fluid w-100" src="img/about-img-1.jpg"
                         style="height: 600px;object-fit: scale-down;">
                 </div>
-                <div class="col-lg-6" data-aos="fade-up">
+                <div class="col-lg-6 px-lg-3" data-aos="fade-up">
                     <!-- <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">UNISEX SALON</h6> -->
                     <h1 class="mb-4">We Are Construction Equipment Centre</h1>
 
-                    <p class="pl-4 border-left border-primary text-dark">
+                    <p class="pl-4 border-left border-primary text-white">
                         We Are Construction Equipment Centre
                         That's great to hear that we are a professional construction equipment supplier! Having a
                         professional approach and expertise in the construction equipment industry can make a
                         significant difference in meeting the needs of your successful construction projects.</p>
-                    <p class="pl-4 border-left border-primary text-dark">
+                    <p class="pl-4 border-left border-primary text-white">
                         We introduce ourselves as one of the largest Distributor / Dealer / Stockist for the
                         construction machineries & other equipments like Safety Equipment, Scaffolding Accessories,
                         Lifting Tools & Tackles, Material Handling and Lifting Equipments, etc. With the expertise
@@ -694,6 +448,14 @@
             position: relative;
         }
 
+        .fa {
+            color: white;
+        }
+
+        .why p {
+            color: white;
+        }
+
         .bgsection {
             background: url(./img/overlay.jpg) bottom center no-repeat;
             background-attachment: fixed;
@@ -710,6 +472,7 @@
             flex-wrap: wrap;
             margin-right: -15px;
             margin-left: -15px;
+            color: white;
         }
 
 
@@ -811,7 +574,7 @@
     <!-- Testimonial Start -->
     <div class="container-fluid py-2">
         <div class="container py-5">
-            <div class="row align-items-center">
+            <div class="row align-items-center" style="box-shadow: inset 2px 2px 2px white;">
                 <!-- <div class="col-lg-6 pb-5 pb-lg-0" data-aos="fade-up">
                    
                     <img alt="constructionequipmentcentre" class="img-fluid w-100" src="img/slide-1.jpg">
@@ -831,7 +594,7 @@
                                     <span>- Head of Operations</span>
                                 </div>
                             </div>
-                            <p class="m-0 text-dark pl-3">The Construction Equipment Centre provided top-notch
+                            <p class="m-0 text-white pl-3">The Construction Equipment Centre provided top-notch
                                 machinery that elevated our project efficiency, delivering quality equipment on time,
                                 every time.
                             </p>
@@ -847,7 +610,7 @@
                                     <span>-Project Manager</span>
                                 </div>
                             </div>
-                            <p class="m-0 text-dark">Exceptional service and a diverse range of reliable construction
+                            <p class="m-0 text-white">Exceptional service and a diverse range of reliable construction
                                 equipment make Construction Equipment Centre our go-to partner for all our project
                                 needs.
                             </p>
@@ -863,7 +626,7 @@
                                     <span>-Construction Manager</span>
                                 </div>
                             </div>
-                            <p class="m-0 text-dark">Reliability and professionalism define our experience with
+                            <p class="m-0 text-white">Reliability and professionalism define our experience with
                                 Construction Equipment Centre; their well-maintained fleet and knowledgeable staff
                                 ensure seamless construction operations.
                             </p>
@@ -879,7 +642,7 @@
                                     <span>-Civil Engineer</span>
                                 </div>
                             </div>
-                            <p class="m-0 text-dark">Choosing Construction Equipment Centre was a game-changer for us.
+                            <p class="m-0 text-white">Choosing Construction Equipment Centre was a game-changer for us.
                                 Their state-of-the-art machinery and responsive service significantly contributed to the
                                 success of our construction endeavors.
                             </p>
@@ -891,7 +654,7 @@
     </div>
     <!-- Testimonial End -->
     <!-- Footer Start -->
-    <div class="footer container-fluid position-relative py-2 pl-4" style="margin-top: 90px;background-color: #153662;"
+    <div class="footer container-fluid position-relative py-2 pl-4" style="margin-top: 90px;background-color:black;"
         id="footer">
         <div class="container">
             <div class="row">
@@ -960,8 +723,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid text-light border-top py-4"
-        style="border-color: rgba(256, 256, 256, .15) !important;background-color: #153662;">
+    <div class="container-fluid text-light  py-4" style="background-color: black;border-top: 1px solid #ffc31d;">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
