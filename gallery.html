@@ -162,7 +162,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="team position-relative overflow-hidden mb-5 ">
-                        <img class="img-fluid im" src="img/2023-07-28 (1).webp" alt="" style="object-fit:contain;">
+                        <img class="img-fluid im" src="img/2023-07-28 (1).webp" alt="" style="object-fit:scale-down;">
 
                         <div class="imt">
                             <p>Auto Level</p>
@@ -175,8 +175,14 @@
                         margin: 5px;
                     }
 
+                    /* .team {
+                        overflow: hidden;
+                    } */
+
                     .team .im {
                         position: relative;
+                        border: 5px solid white;
+                        object-fit: scale-down;
 
                     }
 
@@ -220,7 +226,7 @@
                     }
 
                     .team img {
-                        object-fit: scale-down;
+                        /* object-fit: scale-down; */
                     }
 
                     .team:hover img {
@@ -229,6 +235,10 @@
 
                     .team:hover .imt {
                         display: block;
+                    }
+
+                    .team:hover img {
+                        line-height: 10px;
                     }
                 </style>
                 <div class="col-lg-3 col-md-6">

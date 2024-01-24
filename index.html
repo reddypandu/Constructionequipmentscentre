@@ -66,7 +66,7 @@
         }
     </style>
     <!-- Topbar Start -->
-    <div class="top-navbar pt-3 pb-3">
+    <div class="top-navbar">
         <!-- <div class="container-fluid d-lg-block" style="background-color: transparent;padding: 0;">
             <div class="row py-2 px-lg-5">
                 <div class="col-lg-6 text-left mb-2 mb-lg-0">
@@ -159,6 +159,23 @@
             width: 100%;
             background-color: rgba(0, 0, 0, 0.3);
             box-shadow: inset 2px 3px 5px black;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        @media(max-width:992px) {
+            .top-navbar {
+                background-color: unset;
+                box-shadow: unset;
+                padding-top: unset;
+                padding-bottom: unset;
+
+            }
+
+            .n {
+                background-color: rgba(0, 0, 0, 0.1) !important;
+                box-shadow: 2px 3px 5px black;
+            }
         }
 
         /* .nav-links a.nav-link {
@@ -230,6 +247,44 @@
                         background-size: cover;
                         text-shadow: none !important;
                         font-weight: 900;
+                    }
+
+                    @media(max-width:1200px) {
+                        .display-3 {
+                            font-size: 3rem;
+                        }
+                    }
+
+                    @media(max-width:992px) {
+                        .display-3 {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    @media(max-width:768px) {
+                        .display-3 {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    @media(max-width:500px) {
+                        .display-3 {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    @media(max-width:360px) {
+                        h1.mb-4 {
+                            font-size: 16px;
+                        }
+
+                        .ace_mfg .writup .heading {
+                            font-size: 16px;
+                        }
+
+                        .ace_mfg .writup {
+                            line-height: 16px;
+                        }
                     }
                 </style>
                 <!-- <div class="carousel-item position-relative Ci" style="min-height: 100vh;">
@@ -531,50 +586,50 @@
     </div>
 
     <div class="ace_mfg">
-        <div class="wrap">
-            <div class="writup">
+
+        <!-- <div class="writup">
                 <div class="heading">
                     Construction Equipments Centre</div>
                 <p></p>
-            </div>
-            <div class="thum_area">
-                <div class="box_prod"> <a href="products.html"> <span class="cl_images"> <img src="img/slide-1.jpg"
-                                alt="Cranes"> <span class="bl_over"></span> </span> <span class="cl_content"> <span
-                                class="cl_details">
-                                <span class="cl_details1"> <span class="hr_line"><img src="img/product-icon.png"
-                                            alt="product"></span>
-                                    <div class="prod-tab"> <span class="cl_details2">01</span> <span
-                                            class="cl_details3"><span>CEC</span><br>
-                                            Products</span>
-                                        <div class="clr"></div>
-                                    </div>
-                                </span> </span> </span> </a> </div>
-                <div class="box_prod"> <a href="gallery.html"> <span class="cl_images">
-                            <img src="img/slide-2.jpg" alt="gallery">
-                            <span class="bl_over"></span> </span> <span class="cl_content"> <span class="cl_details">
-                                <span class="cl_details1"> <span class="hr_line"><img src="img/gallery-icon.png"
-                                            alt="gallery"></span>
-                                    <div class="prod-tab"> <span class="cl_details2">01</span> <span
-                                            class="cl_details3"><span>CEC</span><br>
-                                            Photo Gallery</span>
-                                        <div class="clr"></div>
-                                    </div>
-                                </span> </span> </span> </a> </div>
-                <div class="box_prod"> <a href="gallery.html"> <span class="cl_images"> <img src="img/slide-3.jpg"
-                                alt="video"> <span class="bl_over"></span> </span> <span class="cl_content"> <span
-                                class="cl_details">
-                                <span class="cl_details1"> <span class="hr_line"><img src="img/video-icon.png"
-                                            alt="video"></span>
-                                    <div class="prod-tab"> <span class="cl_details2">01</span> <span
-                                            class="cl_details3"><span>CEC</span><br>
-                                            Video Gallery</span>
-                                        <div class="clr"></div>
-                                    </div>
-                                </span> </span> </span> </a> </div>
-                <div class="clr"></div>
-            </div>
+            </div> -->
+        <div class="thum_area">
+            <div class="box_prod"> <a href="products.html"> <span class="cl_images"> <img src="img/slide-1.jpg"
+                            alt="Cranes"> <span class="bl_over"></span> </span> <span class="cl_content"> <span
+                            class="cl_details">
+                            <span class="cl_details1"> <span class="hr_line"><img src="img/product-icon.png"
+                                        alt="product"></span>
+                                <div class="prod-tab"> <span class="cl_details2">01</span> <span
+                                        class="cl_details3"><span>CEC</span><br>
+                                        Products</span>
+                                    <div class="clr"></div>
+                                </div>
+                            </span> </span> </span> </a> </div>
+            <div class="box_prod"> <a href="gallery.html"> <span class="cl_images">
+                        <img src="img/slide-2.jpg" alt="gallery">
+                        <span class="bl_over"></span> </span> <span class="cl_content"> <span class="cl_details">
+                            <span class="cl_details1"> <span class="hr_line"><img src="img/gallery-icon.png"
+                                        alt="gallery"></span>
+                                <div class="prod-tab"> <span class="cl_details2">01</span> <span
+                                        class="cl_details3"><span>CEC</span><br>
+                                        Photo Gallery</span>
+                                    <div class="clr"></div>
+                                </div>
+                            </span> </span> </span> </a> </div>
+            <div class="box_prod"> <a href="products.html#Videos"> <span class="cl_images"> <img src="img/slide-3.jpg"
+                            alt="video"> <span class="bl_over"></span> </span> <span class="cl_content"> <span
+                            class="cl_details">
+                            <span class="cl_details1"> <span class="hr_line"><img src="img/video-icon.png"
+                                        alt="video"></span>
+                                <div class="prod-tab"> <span class="cl_details2">01</span> <span
+                                        class="cl_details3"><span>CEC</span><br>
+                                        Video Gallery</span>
+                                    <div class="clr"></div>
+                                </div>
+                            </span> </span> </span> </a> </div>
             <div class="clr"></div>
         </div>
+        <div class="clr"></div>
+
         <div class="clr"></div>
     </div>
     <!--  -->
@@ -619,7 +674,6 @@
                                     style="height:300px;" />
                                 <p>Cube Mould 150mm</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -926,7 +980,7 @@
             <div class="row">
                 <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
                     <p class="m-0 text-white">Copyright &copy;<a href="#"
-                            style="color:#ffc31d">constructionequipmentcentre</a>.
+                            style="color:#ffc31d;word-break: break-all;">constructionequipmentcentre</a>.
                         All
                         Rights
                         Reserved. | Privacy Policy | Terms of Use.</p>
