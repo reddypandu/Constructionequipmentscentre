@@ -43,37 +43,6 @@
     <!-- Navbar Start -->
     <!-- Topbar Start -->
     <div class="top-navbar">
-        <!-- <div class="container-fluid d-lg-block" style="background-color: transparent;padding: 0;">
-            <div class="row py-2 px-lg-5">
-                <div class="col-lg-6 text-left mb-2 mb-lg-0">
-                    
-                </div>
-                <div class="col-lg-6 text-right">
-                    <div class="top-s">
-                        <small style="color: white;"><a href="tel:+919959997132"></a><i
-                                class="fa fa-phone-alt mr-2"></i>9959997132</a></small>
-                        <small class="px-3 t-line">|</small>
-                        <small style="color: white;"><i class="fa fa-envelope mr-2"
-                                style="word-break: break-all;"></i>constructionequipmentcentre@gmail.com</small>
-                    </div>
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-2" href="tel:+919959997132"><i class="fas fa-phone-alt"
-                                style="color: #ffc31d;"></i></a>
-                        <a class="text-primary px-2" href="https://www.facebook.com/constructionequipmentcentre">
-                            <i class="fab fa-facebook-f" style="color: #ffc31d;"></i>
-                        </a>
-                        <a class="text-primary px-2"
-                            href="https://www.google.com/maps/place/T19+TOWER,+5-4-187%2F6,+Mahatma+Gandhi+Rd,+Karbala+Maidan,+Rani+Gunj,+Secunderabad,+Hyderabad,+Telangana+500003/@17.4288818,78.4873752,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9a1d4515d831:0xbddd57a426729de6!8m2!3d17.4288818!4d78.4873752?authuser=0&entry=ttu">
-                            <i class="fas fa-map-marker-alt" style="color: #ffc31d;"></i>
-                        </a>
-                        <a class="text-primary px-2" href="https://www.instagram.com/constructionequipmentcentre">
-                            <i class="fab fa-instagram" style="color: #ffc31d;"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Topbar End -->
 
 
         <!-- Navbar Start -->
@@ -343,33 +312,7 @@ whatsapp logo
 
         </div>
     </div>
-    <style>
-        .map iframe {
-            width: 80%;
-            height: 450px;
-            border: 0;
-            border: 2px solid #ffc31d;
-        }
 
-        .section.info {
-            background-color: #ffc31d;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            color: #153662;
-
-            margin-top: 1rem;
-        }
-
-        .body-content .heading {
-            color: #153662;
-            font-weight: 600;
-        }
-
-        .body-content span {
-            color: white;
-            font-weight: 200;
-        }
-    </style>
     <!-- Footer Start -->
     <div class="footer container-fluid position-relative py-2 pl-4" style="margin-top: 10px;background-color:black;"
         id="footer">
@@ -476,24 +419,104 @@ whatsapp logo
     <script src="mail/contact.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <!--chatbot script-->
-    <!--Start of Tawk.to Script-->
-    <!-- <script type="text/javascript">var Tawk_API=Tawk_API || {}
+    <script>
+        //book appointment
 
-        ,
-        Tawk_LoadStart=new Date();
+        document
+            .getElementById("bookingForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
 
-        (function () {
-        var s1=document.createElement("script"),
-        s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6560ec7aba9fcf18a80e9f46/1hg19ng29';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-        })();
-        </script>-->
-    <!--End of Tawk.to Script-->
+                var fullName = document.getElementById("fullName").value;
+                var email = document.getElementById("mail").value;
+                var date = document.getElementById("date").value;
+                var time = document.getElementById("time").value;
+                var message = document.getElementById("message").value;
+                var service = document.getElementById("selectedValue").textContent;
+
+
+                // debugger
+
+                // if (!fullName) {
+                //     showError(document.getElementById("name"), "Please enter your name.");
+                //     // return;
+                // }
+
+                // if (!email) {
+                //     showError(document.getElementById("email"), "Please enter your email.");
+                //     // return;
+                // }
+
+                // if (!subject) {
+                //     showError(document.getElementById("subject"), "Please enter a subject.");
+                //     // return;
+                // }
+
+                // if (!message) {
+                //     showError(document.getElementById("message"), "Please enter your message.");
+                //     // return;
+                // }
+                var contact = "+919959997132";
+
+                var encodedMessage = encodeURIComponent(
+                    "Name: " +
+                    fullName +
+                    "\n" +
+                    "Email: " +
+                    email +
+                    "\n" +
+                    "Date: " +
+                    date +
+                    "\n" +
+                    "Time: " +
+                    time +
+                    "\n" +
+                    "Service" +
+                    "\n" +
+                    service +
+                    "\n" +
+                    "Message: " +
+                    message
+                );
+
+                // Check if user is on a mobile device
+                if (
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                        navigator.userAgent
+                    )
+                ) {
+                    // Mobile device, open WhatsApp
+                    var whatsappLink = `whatsapp://send?phone=${contact}&text=${encodedMessage}`;
+                    window.open(whatsappLink, "_blank");
+                } else {
+                    // Desktop device, open default email client
+                    emailjs
+                        .send("service_fx42pst", "template_2ngcxmf", {
+                            from_name: fullName,
+                            to_name: "The Glamour Lounge Unisex Salon",
+                            message: `Booking on ${date} at ${time}
+    Message : ${message}
+    Service : ${service}
+    Reply to ${email}`,
+                            reply_to: email,
+                        })
+                        .then(
+                            function (response) {
+                                // alert("Mail Sent");
+                                document.getElementById("thankYouMessage").style.display = "block";
+                                document.getElementById("bookingForm").reset();
+                                console.log("response==>", response);
+                                // You can redirect or perform other actions after successful email sending
+                            },
+                            function (error) {
+                                alert("Error Sending Mail");
+                                console.log("error==>", error);
+                            }
+                        );
+                }
+            });
+    </script>
+
 </body>
 
 </html>

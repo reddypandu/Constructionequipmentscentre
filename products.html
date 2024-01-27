@@ -54,37 +54,6 @@
     <!-- Navbar Start -->
     <!-- Topbar Start -->
     <div class="top-navbar">
-        <!-- <div class="container-fluid d-lg-block" style="background-color: transparent;padding: 0;">
-            <div class="row py-2 px-lg-5">
-                <div class="col-lg-6 text-left mb-2 mb-lg-0">
-                    
-                </div>
-                <div class="col-lg-6 text-right">
-                    <div class="top-s">
-                        <small style="color: white;"><a href="tel:+919959997132"></a><i
-                                class="fa fa-phone-alt mr-2"></i>9959997132</a></small>
-                        <small class="px-3 t-line">|</small>
-                        <small style="color: white;"><i class="fa fa-envelope mr-2"
-                                style="word-break: break-all;"></i>constructionequipmentcentre@gmail.com</small>
-                    </div>
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-primary px-2" href="tel:+919959997132"><i class="fas fa-phone-alt"
-                                style="color: #ffc31d;"></i></a>
-                        <a class="text-primary px-2" href="https://www.facebook.com/constructionequipmentcentre">
-                            <i class="fab fa-facebook-f" style="color: #ffc31d;"></i>
-                        </a>
-                        <a class="text-primary px-2"
-                            href="https://www.google.com/maps/place/T19+TOWER,+5-4-187%2F6,+Mahatma+Gandhi+Rd,+Karbala+Maidan,+Rani+Gunj,+Secunderabad,+Hyderabad,+Telangana+500003/@17.4288818,78.4873752,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcb9a1d4515d831:0xbddd57a426729de6!8m2!3d17.4288818!4d78.4873752?authuser=0&entry=ttu">
-                            <i class="fas fa-map-marker-alt" style="color: #ffc31d;"></i>
-                        </a>
-                        <a class="text-primary px-2" href="https://www.instagram.com/constructionequipmentcentre">
-                            <i class="fab fa-instagram" style="color: #ffc31d;"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Topbar End -->
 
 
         <!-- Navbar Start -->
@@ -488,43 +457,7 @@ whatsapp logo
         }
         addEventOnElem(filterBtns, "click", filter);
     </script>
-    <style>
-        .videos-section {
-            display: flex;
 
-            gap: 10px;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .videos-section .video {
-            width: 420px;
-            height: 345px;
-            padding: 10px;
-        }
-
-        .videos-section .video iframe {
-            width: 100%;
-            height: 100%;
-        }
-
-        @media(max-width:992px) {
-            .videos-section .video {
-                width: 100%;
-            }
-
-            .videos-section {
-                flex-wrap: wrap;
-            }
-        }
-
-        .videos-heading h3 {
-            text-align: center;
-            clear: both;
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-    </style>
     <div class="videos-heading">
         <h3 class="">Our Products Videos</h3>
     </div>
@@ -959,69 +892,7 @@ whatsapp logo
 
                     </div>
                 </div>
-                <style>
-                    .team .im {
-                        position: relative;
-                        object-fit: scale-down;
 
-                    }
-
-                    .team {
-                        border: 2px solid #ffc31d;
-                    }
-
-                    .team .imt {
-                        position: absolute;
-                        width: 100%;
-                        top: 50%;
-                        left: 50%;
-                        text-align: center;
-                        transform: translate(-50%, -50%);
-                        border: 5px solid rgba(44, 43, 43, 0.61);
-                        z-index: 999;
-                        background-color: rgba(0, 0, 0, 0.426);
-                        display: none;
-                        animation: d 0.8s linear 1;
-                    }
-
-                    @keyframes d {
-                        0% {
-                            top: 0%;
-                            opacity: 0.1;
-                        }
-
-                        50% {
-                            top: 25%;
-                            opacity: 0.5;
-                        }
-
-                        100% {
-                            top: 50%;
-                            opacity: 1;
-                        }
-                    }
-
-                    .team .imt p {
-                        color: white;
-                        font-weight: 700;
-                        font-size: 20px;
-                        padding: 5px;
-                        margin: 0;
-                    }
-
-                    .g img {
-                        margin: 5px;
-                    }
-
-
-                    .team:hover img {
-                        opacity: 0.6;
-                    }
-
-                    .team:hover .imt {
-                        display: block;
-                    }
-                </style>
                 <div class="col-lg-3 col-md-6">
                     <div class="team position-relative overflow-hidden mb-5">
                         <img class="img-fluid im" src="img/2023-07-28 (2).webp" alt="">
@@ -1267,16 +1138,6 @@ whatsapp logo
     </div>
     <!-- Testimonial End -->
 
-
-    <style>
-        .select:focus {
-            background-color: #f9df7a;
-        }
-
-        .select.form-control {
-            background-color: #02445f;
-        }
-    </style>
     <!-- Footer Start -->
     <div class="footer container-fluid position-relative py-2 pl-4" style="margin-top: 90px;background-color:black;"
         id="footer">
@@ -1391,103 +1252,6 @@ whatsapp logo
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-        //book appointment
-
-        document
-            .getElementById("bookingForm")
-            .addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                var fullName = document.getElementById("fullName").value;
-                var email = document.getElementById("mail").value;
-                var date = document.getElementById("date").value;
-                var time = document.getElementById("time").value;
-                var message = document.getElementById("message").value;
-                var service = document.getElementById("selectedValue").textContent;
-
-
-                // debugger
-
-                // if (!fullName) {
-                //     showError(document.getElementById("name"), "Please enter your name.");
-                //     // return;
-                // }
-
-                // if (!email) {
-                //     showError(document.getElementById("email"), "Please enter your email.");
-                //     // return;
-                // }
-
-                // if (!subject) {
-                //     showError(document.getElementById("subject"), "Please enter a subject.");
-                //     // return;
-                // }
-
-                // if (!message) {
-                //     showError(document.getElementById("message"), "Please enter your message.");
-                //     // return;
-                // }
-                var contact = "+919959997132";
-
-                var encodedMessage = encodeURIComponent(
-                    "Name: " +
-                    fullName +
-                    "\n" +
-                    "Email: " +
-                    email +
-                    "\n" +
-                    "Date: " +
-                    date +
-                    "\n" +
-                    "Time: " +
-                    time +
-                    "\n" +
-                    "Service" +
-                    "\n" +
-                    service +
-                    "\n" +
-                    "Message: " +
-                    message
-                );
-
-                // Check if user is on a mobile device
-                if (
-                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                        navigator.userAgent
-                    )
-                ) {
-                    // Mobile device, open WhatsApp
-                    var whatsappLink = `whatsapp://send?phone=${contact}&text=${encodedMessage}`;
-                    window.open(whatsappLink, "_blank");
-                } else {
-                    // Desktop device, open default email client
-                    emailjs
-                        .send("service_fx42pst", "template_2ngcxmf", {
-                            from_name: fullName,
-                            to_name: "The Glamour Lounge Unisex Salon",
-                            message: `Booking on ${date} at ${time}
-    Message : ${message}
-    Service : ${service}
-    Reply to ${email}`,
-                            reply_to: email,
-                        })
-                        .then(
-                            function (response) {
-                                // alert("Mail Sent");
-                                document.getElementById("thankYouMessage").style.display = "block";
-                                document.getElementById("bookingForm").reset();
-                                console.log("response==>", response);
-                                // You can redirect or perform other actions after successful email sending
-                            },
-                            function (error) {
-                                alert("Error Sending Mail");
-                                console.log("error==>", error);
-                            }
-                        );
-                }
-            });
-    </script>
 
 </body>
 
