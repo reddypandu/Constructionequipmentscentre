@@ -96,6 +96,28 @@
       },
     },
   });
+  $(".pricing-carousell").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1500,
+    margin: 30,
+    loop: true,
+    dots: false,
+    nav: true,
+    responsive: {
+      0: {
+        items: 4,
+      },
+      576: {
+        items: 4,
+      },
+      768: {
+        items: 4,
+      },
+      992: {
+        items: 4,
+      },
+    },
+  });
 
   // Testimonials carousel
   $(".testimonial-carousel").owlCarousel({
