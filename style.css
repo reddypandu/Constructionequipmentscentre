@@ -61,10 +61,6 @@
   padding-left: 0 !important;
 }
 
-body {
-  /* background: #f0f0f0; */
-}
-
 .wrap {
   max-width: 1280px;
 
@@ -1048,11 +1044,6 @@ body {
   padding-bottom: 20px;
 }
 
-.facts h2,
-.intro_map .intro p,
-.intro_map .map_area .worldtext {
-}
-
 .intro_map .intro p {
   text-align: center;
 
@@ -1762,13 +1753,6 @@ body {
   text-decoration: underline;
 }
 
-.awards .achivment .capt .year,
-.awards .social_act h3,
-.awards h3,
-.whats_new .acs_area .txt_yellow h3,
-.whats_new .acs_area .txt_yellow p {
-}
-
 .whats_new .wnew .new_area .text_new .more a:hover {
   color: #000;
 
@@ -2032,7 +2016,7 @@ body {
 }
 
 .award-slider .owl-buttons div {
-  dispaly: inline-block;
+  display: inline-block;
 
   float: left;
 
@@ -3414,7 +3398,7 @@ body {
 }
 
 .container .right_area .rental .table-format a {
-  fonr-size: 12px;
+  font-size: 12px;
 
   font-weight: 700;
 
@@ -4691,7 +4675,7 @@ body {
 
   transition: all 0.7s;
 
-  webkit-transition: all 0.7s;
+  -webkit-transition: all 0.7s;
 }
 
 .contect_info .contact_form .formbox .qc_toggle {
@@ -5240,7 +5224,7 @@ body {
 }
 
 .prod-detail .prod_cat span.prd_images img:hover {
-  webkit-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
 
   -moz-transform: scale(1.08);
 

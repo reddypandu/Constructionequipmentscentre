@@ -577,6 +577,32 @@ mark,
   z-index: 999;
   animation: w 1s linear infinite;
 }
+.whatsapp div {
+  position: fixed;
+  right: 80px;
+  bottom: 25px;
+  max-width: 150px;
+  background-color: #ffc31d;
+  border-radius: 5px;
+  display: none;
+  transition: 0.5s all;
+}
+.whatsapp div p {
+  font-size: 14px;
+  width: 100px;
+  padding-block: 2px;
+  margin: 0;
+  color: #153662;
+}
+.whatsapp div p:before {
+  content: "";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  right: -10px;
+  top: 30%;
+  border-color: transparent transparent transparent #ffc31d;
+}
 @keyframes w {
   0%,
   100% {
@@ -594,6 +620,9 @@ mark,
   color: #153662;
   transition: 0.1s ease-in-out;
   text-decoration: none;
+}
+.whatsapp:hover div {
+  display: block;
 }
 .img-fluid {
   max-width: 100%;
@@ -4253,11 +4282,6 @@ input[type="button"].btn-block {
   }
 }
 @media (max-width: 992px) {
-  .n {
-    /* position: absolute;
-    z-index: 999; */
-  }
-
   .walk .mobile {
     display: block;
   }
@@ -10617,10 +10641,6 @@ h6,
 }
 
 @media (min-width: 992px) {
-  .hours-text,
-  .pricing-text {
-    /* margin-left: -120px; */
-  }
 }
 .team img {
   position: relative;
