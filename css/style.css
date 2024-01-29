@@ -65,7 +65,7 @@ body {
   color: #757575;
   text-align: left;
   background-color: rgb(20, 20, 20);
-  /* background-image: linear-gradient(90deg, white 20%, #ffc31d 30%, #153662 50%); */
+  /* background-image: linear-gradient(90deg, white 20%, #ffc31d 30%, #353d9a 50%); */
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -592,7 +592,7 @@ mark,
   width: 100px;
   padding-block: 2px;
   margin: 0;
-  color: #153662;
+  color: #353d9a;
 }
 .whatsapp div p:before {
   content: "";
@@ -617,7 +617,7 @@ mark,
   padding: 12px;
 }
 .whatsapp:hover a {
-  color: #153662;
+  color: #353d9a;
   transition: 0.1s ease-in-out;
   text-decoration: none;
 }
@@ -4408,7 +4408,7 @@ input[type="button"].btn-block {
   box-shadow: inset 2px 3px 5px black;
   padding-top: 1rem;
   padding-bottom: 1rem; */
-  background-color: #153662;
+  background-color: #353d9a;
 }
 
 @media (max-width: 992px) {
@@ -4420,7 +4420,7 @@ input[type="button"].btn-block {
   }
 
   .n {
-    background-color: #153662 !important;
+    background-color: #353d9a !important;
     box-shadow: 2px 3px 5px black;
   }
 }
@@ -4444,7 +4444,7 @@ input[type="button"].btn-block {
   z-index: 999;
   width: 100%;
   padding-bottom: 20px;
-  background-color: #153662 !important;
+  background-color: #353d9a !important;
 }
 
 .navbar .container,
@@ -4476,19 +4476,19 @@ input[type="button"].btn-block {
 }
 
 .select.form-control {
-  background-color: #153662;
+  background-color: #353d9a;
 }
 .section.info {
   background-color: #ffc31d;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  color: #153662;
+  color: #353d9a;
 
   margin-top: 1rem;
 }
 
 .body-content .heading {
-  color: #153662;
+  color: #353d9a;
   font-weight: 600;
 }
 
@@ -4700,7 +4700,7 @@ input[type="button"].btn-block {
 
     border-radius: 5px;
     background-color: unset;
-    color: #153662;
+    color: #353d9a;
   }
 }
 .navbar-brand {
@@ -4756,7 +4756,7 @@ input[type="button"].btn-block {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  background-color: #153662;
+  background-color: #353d9a;
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -4840,7 +4840,7 @@ input[type="button"].btn-block {
 }
 @media (max-width: 992px) {
   .navbar-collapse {
-    background-color: #153662;
+    background-color: #353d9a;
   }
 }
 .navbar-toggler {
@@ -5123,7 +5123,7 @@ input[type="button"].btn-block {
 .drop-items {
   position: absolute;
   list-style-type: none;
-  background-color: #153662;
+  background-color: #353d9a;
   padding: 0;
   top: 100%;
   left: 20%;
@@ -5220,7 +5220,7 @@ input[type="button"].btn-block {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: #153662;
+  color: #353d9a;
   background-color: #ffc31d;
 }
 
@@ -10238,7 +10238,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #153662 !important;
+  color: #353d9a !important;
 }
 i.text-primary {
   color: #ffc31d !important;
@@ -10466,7 +10466,7 @@ h6,
 
 .btn.btn-primary,
 .btn.btn-secondary {
-  color: #153662 !important;
+  color: #353d9a !important;
 }
 
 .btn-square {
@@ -10588,7 +10588,7 @@ h6,
   /* background-color: rgba(0, 0, 0, 0.2); */
 }
 .carousel-caption .hometitle h3 {
-  color: #153662 !important;
+  color: #353d9a !important;
 }
 
 .service-item img {
