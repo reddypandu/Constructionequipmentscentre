@@ -425,70 +425,9 @@ whatsapp logo
         </div>
     </div>
 
+
     <script>
-        // Get all li elements with class "item"
-        const items = document.querySelectorAll('.container .left_area .gry_box ul li p');
 
-        // Function to handle click event and toggle "active" class
-        function handleItemClick() {
-            // Remove "active" class from all items
-            items.forEach(item => item.classList.remove('activ'));
-
-            // Add "active" class to the clicked item
-            this.classList.add('activ');
-        }
-
-        // Add click event listener to each item
-        items.forEach(item => item.addEventListener('click', handleItemClick));
-    </script>
-    <script>
-        /**
-  * filter function
-  */
-        const addEventOnElem = function (elem, type, callback) {
-            if (elem.length > 1) {
-                for (let i = 0; i < elem.length; i++) {
-                    elem[i].addEventListener(type, callback);
-                }
-            } else {
-                elem.addEventListener(type, callback);
-            }
-        };
-
-        const filterBtns = document.querySelectorAll("[data-filter-btn]");
-        const filterItems = document.querySelectorAll("[data-filter]");
-
-        let lastClickedFilterBtn = filterBtns[0];
-
-        const filter = function () {
-            lastClickedFilterBtn.classList.remove("active");
-            this.classList.add("active");
-            lastClickedFilterBtn = this;
-
-            for (let i = 0; i < filterItems.length; i++) {
-                if (
-                    this.dataset.filterBtn === filterItems[i].dataset.filter
-
-                    ||
-                    this.dataset.filterBtn === "all"
-                ) {
-                    filterItems[i].style.display = "block";
-                    filterItems[i].classList.add("active");
-                } else {
-                    filterItems[i].style.display = "none";
-                    filterItems[i].classList.remove("active");
-                }
-            }
-        };
-        // Call filter function with the first filter button to show details of the first item
-        filter.call(filterBtns[0]);
-
-        // Optionally, you can set the initial state of the filter items
-        for (let i = 1; i < filterItems.length; i++) {
-            filterItems[i].style.display = "none";
-            filterItems[i].classList.remove("active");
-        }
-        addEventOnElem(filterBtns, "click", filter);
     </script>
 
     <div class="videos-heading">

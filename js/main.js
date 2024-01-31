@@ -140,63 +140,6 @@ $(window).scroll(function () {
   }
 });
 
-/**
- * add event on element
- */
-
-// const addEventOnElem = function (e, type, callback) {
-//   if (e.length > 1) {
-//     for (let i = 0; i < e.length; i++) {
-//       e[i].addEventListener(type, callback);
-//     }
-//   } else {
-//     e.addEventListener(type, callback);
-//   }
-// };
-
-// const filterBtns = document.querySelectorAll("[data-filter-btn]");
-// const filterItems = document.querySelectorAll("[data-filter]");
-
-// let lastClickedFilterBtn = filterBtns[0];
-
-// const filter = function () {
-//   lastClickedFilterBtn.classList.remove("active");
-//   this.classList.add("active");
-//   lastClickedFilterBtn = this;
-
-//   for (let i = 0; i < filterItems.length; i++) {
-//     if (
-//       this.dataset.filterBtn === filterItems[i].dataset.filter ||
-//       this.dataset.filterBtn === "all"
-//     ) {
-//       filterItems[i].style.display = "block";
-//       filterItems[i].classList.add("active");
-//     } else {
-//       filterItems[i].style.display = "none";
-//       filterItems[i].classList.remove("active");
-//     }
-//   }
-// };
-
-// addEventOnElem(filterBtns, "click", filter);
-//remove .html extension when hover
-// document.addEventListener("DOMContentLoaded", function () {
-//   const navLinks = document.querySelectorAll(".navbar-nav a");
-
-//   navLinks.forEach((link) => {
-//     link.addEventListener("mouseover", function () {
-//       const originalHref = link.getAttribute("href");
-//       const cleanHref = originalHref.replace(".html", "");
-//       link.setAttribute("href", cleanHref);
-//     });
-
-//     link.addEventListener("mouseout", function () {
-//       const originalHref = link.getAttribute("href");
-//       const restoreHref = originalHref + ".html";
-//       link.setAttribute("href", restoreHref);
-//     });
-//   });
-// });
 // loader
 var loader = function () {
   // Show loader
@@ -213,14 +156,48 @@ var loader = function () {
 };
 
 loader();
-document.addEventListener("DOMContentLoaded", function () {
-  // Get the current URL path
-  var currentPath = window.location.pathname;
-
-  // Check if it's the services page
-  if (currentPath.startsWith("/products")) {
-    // Show the corresponding service content based on the URL
-    var serviceName = currentPath.split("/").pop();
-    document.getElementById(serviceName).style.display = "block";
+/**
+ * filter function
+ */
+const addEventOnElem = function (elem, type, callback) {
+  if (elem.length > 1) {
+    for (let i = 0; i < elem.length; i++) {
+      elem[i].addEventListener(type, callback);
+    }
+  } else {
+    elem.addEventListener(type, callback);
   }
-});
+};
+
+const filterBtns = document.querySelectorAll("[data-filter-btn]");
+const filterItems = document.querySelectorAll("[data-filter]");
+
+let lastClickedFilterBtn = filterBtns[0];
+
+const filter = function () {
+  lastClickedFilterBtn.classList.remove("active");
+  this.classList.add("active");
+  lastClickedFilterBtn = this;
+
+  for (let i = 0; i < filterItems.length; i++) {
+    if (
+      this.dataset.filterBtn === filterItems[i].dataset.filter ||
+      this.dataset.filterBtn === "all"
+    ) {
+      filterItems[i].style.display = "block";
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].style.display = "none";
+      filterItems[i].classList.remove("active");
+    }
+  }
+};
+// Call filter function with the first filter button to show details of the first item
+filter.call(filterBtns[0]);
+
+// Optionally, you can set the initial state of the filter items
+for (let i = 1; i < filterItems.length; i++) {
+  filterItems[i].style.display = "none";
+  filterItems[i].classList.remove("active");
+}
+addEventOnElem(filterBtns, "click", filter);
