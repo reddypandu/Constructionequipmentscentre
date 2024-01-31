@@ -159,45 +159,76 @@ loader();
 /**
  * filter function
  */
-const addEventOnElem = function (elem, type, callback) {
-  if (elem.length > 1) {
-    for (let i = 0; i < elem.length; i++) {
-      elem[i].addEventListener(type, callback);
+// const addEventOnElem = function (elem, type, callback) {
+//   if (elem.length > 1) {
+//     for (let i = 0; i < elem.length; i++) {
+//       elem[i].addEventListener(type, callback);
+//     }
+//   } else {
+//     elem.addEventListener(type, callback);
+//   }
+// };
+
+// const filterBtns = document.querySelectorAll("[data-filter-btn]");
+// const filterItems = document.querySelectorAll("[data-filter]");
+
+// let lastClickedFilterBtn = filterBtns[0];
+
+// const filter = function () {
+//   lastClickedFilterBtn.classList.remove("active");
+//   this.classList.add("active");
+//   lastClickedFilterBtn = this;
+
+//   for (let i = 0; i < filterItems.length; i++) {
+//     if (
+//       this.dataset.filterBtn === filterItems[i].dataset.filter ||
+//       this.dataset.filterBtn === "all"
+//     ) {
+//       filterItems[i].style.display = "block";
+//       filterItems[i].classList.add("active");
+//     } else {
+//       filterItems[i].style.display = "none";
+//       filterItems[i].classList.remove("active");
+//     }
+//   }
+// };
+// // Call filter function with the first filter button to show details of the first item
+// filter.call(filterBtns[0]);
+
+// // Optionally, you can set the initial state of the filter items
+// for (let i = 1; i < filterItems.length; i++) {
+//   filterItems[i].style.display = "none";
+//   filterItems[i].classList.remove("active");
+// }
+// addEventOnElem(filterBtns, "click", filter);
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            elmnt.innerHTML = this.responseText;
+          }
+          if (this.status == 404) {
+            elmnt.innerHTML = "Page not found.";
+          }
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      };
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
     }
-  } else {
-    elem.addEventListener(type, callback);
   }
-};
-
-const filterBtns = document.querySelectorAll("[data-filter-btn]");
-const filterItems = document.querySelectorAll("[data-filter]");
-
-let lastClickedFilterBtn = filterBtns[0];
-
-const filter = function () {
-  lastClickedFilterBtn.classList.remove("active");
-  this.classList.add("active");
-  lastClickedFilterBtn = this;
-
-  for (let i = 0; i < filterItems.length; i++) {
-    if (
-      this.dataset.filterBtn === filterItems[i].dataset.filter ||
-      this.dataset.filterBtn === "all"
-    ) {
-      filterItems[i].style.display = "block";
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].style.display = "none";
-      filterItems[i].classList.remove("active");
-    }
-  }
-};
-// Call filter function with the first filter button to show details of the first item
-filter.call(filterBtns[0]);
-
-// Optionally, you can set the initial state of the filter items
-for (let i = 1; i < filterItems.length; i++) {
-  filterItems[i].style.display = "none";
-  filterItems[i].classList.remove("active");
 }
-addEventOnElem(filterBtns, "click", filter);
