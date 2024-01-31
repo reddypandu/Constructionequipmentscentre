@@ -213,3 +213,14 @@ var loader = function () {
 };
 
 loader();
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current URL path
+  var currentPath = window.location.pathname;
+
+  // Check if it's the services page
+  if (currentPath.startsWith("/products")) {
+    // Show the corresponding service content based on the URL
+    var serviceName = currentPath.split("/").pop();
+    document.getElementById(serviceName).style.display = "block";
+  }
+});
