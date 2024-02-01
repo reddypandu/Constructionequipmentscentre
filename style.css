@@ -2888,8 +2888,6 @@
 .container .left_area .gry_box ul li p:hover {
   color: #fff !important;
 
-  line-height: 20px;
-
   background: url(../images/tab-arrow-h.png) 12px 11px no-repeat #333;
 }
 
