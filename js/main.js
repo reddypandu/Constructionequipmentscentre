@@ -201,34 +201,53 @@ loader();
 //   filterItems[i].classList.remove("active");
 // }
 // addEventOnElem(filterBtns, "click", filter);
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4) {
-          if (this.status == 200) {
-            elmnt.innerHTML = this.responseText;
-          }
-          if (this.status == 404) {
-            elmnt.innerHTML = "Page not found.";
-          }
-          /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      };
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /* Exit the function: */
-      return;
-    }
-  }
-}
+//     const filterBtns = document.querySelectorAll("[data-filter-btn]");
+//     const filterItems = document.querySelectorAll("[data-filter]");
+
+//     let lastClickedFilterBtn = null;
+
+//     const filter = function () {
+//         if (lastClickedFilterBtn) {
+//             lastClickedFilterBtn.classList.remove("active");
+//         }
+//         this.classList.add("active");
+//         lastClickedFilterBtn = this;
+
+//         const clickedFilter = this.dataset.filterBtn;
+
+//         for (let i = 0; i < filterItems.length; i++) {
+//             const itemFilter = filterItems[i].dataset.filter;
+//             const btnFilter = filterBtns[i].dataset.filter;
+
+//             if (clickedFilter === "all" || clickedFilter === itemFilter || clickedFilter === btnFilter) {
+//                 filterItems[i].style.display = "block";
+//                 filterItems[i].classList.add("active");
+//                 filterBtns[i].style.display = "block";
+//                 filterBtns[i].classList.add("active");
+//             } else {
+//                 filterItems[i].style.display = "none";
+//                 filterItems[i].classList.remove("active");
+//                 filterBtns[i].style.display = "none";
+//                 filterBtns[i].classList.remove("active");
+//             }
+//         }
+//     };
+
+//     // Optionally, you can set the initial state of the filter items
+//     for (let i = 0; i < filterItems.length; i++) {
+//         filterItems[i].style.display = "none";
+//         filterItems[i].classList.remove("active");
+//     }
+//     for (let i = 0; i < filterBtns.length; i++) {
+//         filterBtns[i].style.display = "active";
+//         filterBtns[i].classList.remove("none");
+//     }
+
+//     // Call filter function when a filter button is clicked
+//     for (const btn of filterBtns) {
+//         btn.addEventListener("click", filter);
+//     }
+
+//     // Optionally, you can call filter with a default button to show initial data
+//     // filter.call(filterBtns[0]);
+//
