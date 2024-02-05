@@ -6298,7 +6298,7 @@ table.table-stripe tr:nth-child(even) td {
   margin: 0 2% 25px 0;
 
   overflow: hidden;
-
+  border: 2px solid #353d9a;
   width: 31%;
 }
 
