@@ -99,7 +99,15 @@
                             <li><a href="#" class="nav-item nav-link active nav"> Home</a></li>
                             <li><a href="about.html" class="nav-item nav-link  nav">
                                     About</a></li>
-                            <li class="drop-down"><a href="products.html" class="nav-item nav-link  nav ">Products</a>
+                            <li class="drop-down">
+                                <a href="products.html" class="nav-item nav-link  nav ">Products<span
+                                        class="d-arrow">&#11167;
+                                    </span></a>
+
+                                <span class="d-plus float-right">&plus;
+                                </span>
+
+
                                 <ul class="drop-items">
 
                                     <li><a href="./products/cement-testing.html">CEMENT TESTING
@@ -125,16 +133,59 @@
         <!-- Navbar End -->
     </div>
     <style>
-        /* .nav-links a.nav-link {
-            box-shadow: inset 2px 2px 2px black;
-            background-color: rgba(0, 0, 0, 0.3);
+        .d-plus {
+            display: none;
         }
 
-        .navbar.active .nav-links a.nav-link {
-            box-shadow: inset 2px 2px 2px white;
-            background-color: rgba(255, 254, 254, 0.034);
-        } */
+        @media(max-width:992px) {
+
+
+            .drop-items {
+                position: unset;
+            }
+
+            .d-arrow {
+                display: none;
+            }
+
+            .navbar-light .navbar-nav li {
+                border-bottom: 1px solid white;
+            }
+
+            .navbar-light .navbar-nav {
+                overflow-y: scroll;
+            }
+
+            .d-plus {
+                display: block;
+                color: #ffc31d;
+                font-size: 20px;
+                font-weight: 700;
+                padding-right: 1rem;
+                margin-top: -2.5rem;
+                cursor: pointer;
+            }
+
+            .drop-down:hover .drop-items {
+                display: none;
+            }
+
+            .drop-down.active .drop-items {
+                display: block;
+                width: 100%;
+                left: 0;
+            }
+        }
     </style>
+    <script>
+        const btn = document.querySelector(".drop-down");
+        const li = document.querySelector(".drop-down .nav-item");
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("active");
+            li.style.color = "#ffc31d";
+        });
+
+    </script>
     <div class="cookies">
 
         <div class="left">
@@ -398,20 +449,7 @@
                                 construction industry especially well known for the quality and reliability.
                             </span>
                         </p>
-                        <!-- <div class="row pt-3">
-                        <div class="col-6">
-                            <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up">99</h3>
-                                <h6 class="text-uppercase">Spa Specialist</h6>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up">999</h3>
-                                <h6 class="text-uppercase">Happy Clients</h6>
-                            </div>
-                        </div>
-                    </div> -->
+
                     </div>
 
                 </div>
