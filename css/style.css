@@ -5177,6 +5177,49 @@ input[type="button"].btn-block {
     width: 100%;
   }
 }
+.d-plus {
+  display: none;
+}
+
+@media(max-width:992px) {
+
+
+  .drop-items {
+      position: unset;
+  }
+
+  .d-arrow {
+      display: none;
+  }
+
+  .navbar-light .navbar-nav li {
+      border-bottom: 1px solid white;
+  }
+
+  .navbar-light .navbar-nav {
+      overflow-y: scroll;
+  }
+
+  .d-plus {
+      display: block;
+      color: #ffc31d;
+      font-size: 20px;
+      font-weight: 700;
+      padding-right: 1rem;
+      margin-top: -2.5rem;
+      cursor: pointer;
+  }
+
+  .drop-down:hover .drop-items {
+      display: none;
+  }
+
+  .drop-down.active .drop-items {
+      display: block;
+      width: 100%;
+      left: 0;
+  }
+}
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,

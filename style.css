@@ -5204,6 +5204,7 @@
   vertical-align: top;
 
   overflow: hidden;
+  height: 250px;
 }
 
 .prod-detail .prod_cat span.prd_images img {
@@ -5218,7 +5219,7 @@
   transition: 0.6s ease;
 
   overflow: hidden;
-  max-height: 358px;
+  height: 100%;
 }
 
 .prod-detail .prod_cat span.prd_images img:hover {
@@ -6300,6 +6301,7 @@ table.table-stripe tr:nth-child(even) td {
   overflow: hidden;
   border: 2px solid #353d9a;
   width: 31%;
+  /* height: 300px; */
 }
 
 .opening-form .fields .field input[type="file"] {

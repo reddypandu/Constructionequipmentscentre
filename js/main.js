@@ -251,3 +251,11 @@ loader();
 //     // Optionally, you can call filter with a default button to show initial data
 //     // filter.call(filterBtns[0]);
 //
+const btn = document.querySelector(".drop-down");
+const li = document.querySelector(".drop-down .nav-item");
+const nav = document.querySelector(".nav-item");
+btn.addEventListener("click", () => {
+  btn.classList.toggle("active");
+  li.style.color = "#ffc31d";
+  nav.classList.remove("active");
+});
