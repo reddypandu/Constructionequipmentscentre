@@ -5128,7 +5128,14 @@ input[type="button"].btn-block {
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
 }
+.yamm-content {
+  padding: 10px 20px;
+}
 
+.yamm-content ul {
+  padding: 0;
+  padding-left: 5px;
+}
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus {
   color: rgba(0, 0, 0, 0.9);
@@ -5158,7 +5165,7 @@ input[type="button"].btn-block {
   transition: hover 2s all ease-in-out;
 }
 .drop-items {
-  position: absolute;
+  /* position: absolute;
   list-style-type: none;
   background-color: #353d9a;
   padding: 0;
@@ -5168,13 +5175,24 @@ input[type="button"].btn-block {
   width: 300px;
   padding-left: 5px;
   padding-right: 5px;
+  display: none; */
+  padding: 0;
+  position: absolute;
+  margin-top: 2px;
+  top: 100%;
+  left: -200px;
+  background-color: #353d9a;
   display: none;
+  width: 600px;
+  box-shadow: 1px 1px 2px black;
+  z-index: 999;
 }
 
 .drop-items li {
   padding: 10px;
   cursor: pointer;
   border-bottom: 1px solid white;
+  list-style-type: none;
 }
 .drop-items li a {
   color: white;
@@ -5231,9 +5249,9 @@ input[type="button"].btn-block {
     border-bottom: 1px solid white;
   }
 
-  .navbar-light .navbar-nav {
+  /* .navbar-light .navbar-nav {
     overflow-y: scroll;
-  }
+  } */
 
   .d-plus {
     display: block;
@@ -5253,6 +5271,27 @@ input[type="button"].btn-block {
     display: block;
     width: 100%;
     left: 0;
+  }
+}
+.fa-arrow-right {
+  margin-right: 5px;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    overflow-y: scroll;
+    max-height: 75vh;
+  }
+  .navbar-nav::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .navbar-nav::-webkit-scrollbar-thumb {
+    background-color: #353d9a;
+  }
+
+  .navbar-nav::-webkit-scrollbar-track {
+    background-color: white;
   }
 }
 .navbar-light .navbar-nav .show > .nav-link,
