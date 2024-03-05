@@ -156,101 +156,7 @@ var loader = function () {
 };
 
 loader();
-/**
- * filter function
- */
-// const addEventOnElem = function (elem, type, callback) {
-//   if (elem.length > 1) {
-//     for (let i = 0; i < elem.length; i++) {
-//       elem[i].addEventListener(type, callback);
-//     }
-//   } else {
-//     elem.addEventListener(type, callback);
-//   }
-// };
 
-// const filterBtns = document.querySelectorAll("[data-filter-btn]");
-// const filterItems = document.querySelectorAll("[data-filter]");
-
-// let lastClickedFilterBtn = filterBtns[0];
-
-// const filter = function () {
-//   lastClickedFilterBtn.classList.remove("active");
-//   this.classList.add("active");
-//   lastClickedFilterBtn = this;
-
-//   for (let i = 0; i < filterItems.length; i++) {
-//     if (
-//       this.dataset.filterBtn === filterItems[i].dataset.filter ||
-//       this.dataset.filterBtn === "all"
-//     ) {
-//       filterItems[i].style.display = "block";
-//       filterItems[i].classList.add("active");
-//     } else {
-//       filterItems[i].style.display = "none";
-//       filterItems[i].classList.remove("active");
-//     }
-//   }
-// };
-// // Call filter function with the first filter button to show details of the first item
-// filter.call(filterBtns[0]);
-
-// // Optionally, you can set the initial state of the filter items
-// for (let i = 1; i < filterItems.length; i++) {
-//   filterItems[i].style.display = "none";
-//   filterItems[i].classList.remove("active");
-// }
-// addEventOnElem(filterBtns, "click", filter);
-//     const filterBtns = document.querySelectorAll("[data-filter-btn]");
-//     const filterItems = document.querySelectorAll("[data-filter]");
-
-//     let lastClickedFilterBtn = null;
-
-//     const filter = function () {
-//         if (lastClickedFilterBtn) {
-//             lastClickedFilterBtn.classList.remove("active");
-//         }
-//         this.classList.add("active");
-//         lastClickedFilterBtn = this;
-
-//         const clickedFilter = this.dataset.filterBtn;
-
-//         for (let i = 0; i < filterItems.length; i++) {
-//             const itemFilter = filterItems[i].dataset.filter;
-//             const btnFilter = filterBtns[i].dataset.filter;
-
-//             if (clickedFilter === "all" || clickedFilter === itemFilter || clickedFilter === btnFilter) {
-//                 filterItems[i].style.display = "block";
-//                 filterItems[i].classList.add("active");
-//                 filterBtns[i].style.display = "block";
-//                 filterBtns[i].classList.add("active");
-//             } else {
-//                 filterItems[i].style.display = "none";
-//                 filterItems[i].classList.remove("active");
-//                 filterBtns[i].style.display = "none";
-//                 filterBtns[i].classList.remove("active");
-//             }
-//         }
-//     };
-
-//     // Optionally, you can set the initial state of the filter items
-//     for (let i = 0; i < filterItems.length; i++) {
-//         filterItems[i].style.display = "none";
-//         filterItems[i].classList.remove("active");
-//     }
-//     for (let i = 0; i < filterBtns.length; i++) {
-//         filterBtns[i].style.display = "active";
-//         filterBtns[i].classList.remove("none");
-//     }
-
-//     // Call filter function when a filter button is clicked
-//     for (const btn of filterBtns) {
-//         btn.addEventListener("click", filter);
-//     }
-
-//     // Optionally, you can call filter with a default button to show initial data
-//     // filter.call(filterBtns[0]);
-//
 const btn = document.querySelector(".drop-down");
 const li = document.querySelector(".drop-down .nav-item");
 const nav = document.querySelector(".nav-item");
@@ -259,3 +165,63 @@ btn.addEventListener("click", () => {
   li.style.color = "#ffc31d";
   nav.classList.remove("active");
 });
+
+
+const {RecaptchaEnterpriseServiceClient} = require('@google-cloud/recaptcha-enterprise');
+
+/**
+  * Create an assessment to analyze the risk of a UI action.
+  *
+  * projectID: Your Google Cloud Project ID.
+  * recaptchaSiteKey: The reCAPTCHA key associated with the site/app
+  * token: The generated token obtained from the client.
+  * recaptchaAction: Action name corresponding to the token.
+  */
+async function createAssessment({
+  // TODO: Replace the token and reCAPTCHA action variables before running the sample.
+  projectID = "construction-equ-1709620661652",
+  recaptchaKey = "6LfwTYopAAAAABWx6lgfPLMPtFzyIQoMm4mszZNI",
+  token = "action-token",
+  recaptchaAction = "action-name",
+}) {
+  // Create the reCAPTCHA client.
+  // TODO: Cache the client generation code (recommended) or call client.close() before exiting the method.
+  const client = new RecaptchaEnterpriseServiceClient();
+  const projectPath = client.projectPath(projectID);
+
+  // Build the assessment request.
+  const request = ({
+    assessment: {
+      event: {
+        token: token,
+        siteKey: recaptchaKey,
+      },
+    },
+    parent: projectPath,
+  });
+
+  const [ response ] = await client.createAssessment(request);
+
+  // Check if the token is valid.
+  if (!response.tokenProperties.valid) {
+    console.log(`The CreateAssessment call failed because the token was: ${response.tokenProperties.invalidReason}`);
+    return null;
+  }
+
+  // Check if the expected action was executed.
+  // The `action` property is set by user client in the grecaptcha.enterprise.execute() method.
+  if (response.tokenProperties.action === recaptchaAction) {
+    // Get the risk score and the reason(s).
+    // For more information on interpreting the assessment, see:
+    // https://cloud.google.com/recaptcha-enterprise/docs/interpret-assessment
+    console.log(`The reCAPTCHA score is: ${response.riskAnalysis.score}`);
+    response.riskAnalysis.reasons.forEach((reason) => {
+      console.log(reason);
+    });
+
+    return response.riskAnalysis.score;
+  } else {
+    console.log("The action attribute in your reCAPTCHA tag does not match the action you are expecting to score");
+    return null;
+  }
+}
