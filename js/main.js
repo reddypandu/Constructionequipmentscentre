@@ -166,17 +166,18 @@ btn.addEventListener("click", () => {
   nav.classList.remove("active");
 });
 
-
-const {RecaptchaEnterpriseServiceClient} = require('@google-cloud/recaptcha-enterprise');
+const {
+  RecaptchaEnterpriseServiceClient,
+} = require("@google-cloud/recaptcha-enterprise");
 
 /**
-  * Create an assessment to analyze the risk of a UI action.
-  *
-  * projectID: Your Google Cloud Project ID.
-  * recaptchaSiteKey: The reCAPTCHA key associated with the site/app
-  * token: The generated token obtained from the client.
-  * recaptchaAction: Action name corresponding to the token.
-  */
+ * Create an assessment to analyze the risk of a UI action.
+ *
+ * projectID: Your Google Cloud Project ID.
+ * recaptchaSiteKey: The reCAPTCHA key associated with the site/app
+ * token: The generated token obtained from the client.
+ * recaptchaAction: Action name corresponding to the token.
+ */
 async function createAssessment({
   // TODO: Replace the token and reCAPTCHA action variables before running the sample.
   projectID = "construction-equ-1709620661652",
@@ -190,7 +191,7 @@ async function createAssessment({
   const projectPath = client.projectPath(projectID);
 
   // Build the assessment request.
-  const request = ({
+  const request = {
     assessment: {
       event: {
         token: token,
@@ -198,13 +199,15 @@ async function createAssessment({
       },
     },
     parent: projectPath,
-  });
+  };
 
-  const [ response ] = await client.createAssessment(request);
+  const [response] = await client.createAssessment(request);
 
   // Check if the token is valid.
   if (!response.tokenProperties.valid) {
-    console.log(`The CreateAssessment call failed because the token was: ${response.tokenProperties.invalidReason}`);
+    console.log(
+      `The CreateAssessment call failed because the token was: ${response.tokenProperties.invalidReason}`
+    );
     return null;
   }
 
@@ -221,7 +224,9 @@ async function createAssessment({
 
     return response.riskAnalysis.score;
   } else {
-    console.log("The action attribute in your reCAPTCHA tag does not match the action you are expecting to score");
+    console.log(
+      "The action attribute in your reCAPTCHA tag does not match the action you are expecting to score"
+    );
     return null;
   }
 }
