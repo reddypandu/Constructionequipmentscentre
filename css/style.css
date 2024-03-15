@@ -11117,3 +11117,91 @@ h6,
     opacity: 1;
   }
 }
+#header-carousel .cI img.mobile {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  #header-carousel {
+    height: 600px;
+  }
+
+  .walk {
+    height: 600px;
+  }
+
+  #header-carousel .cI {
+    height: 600px;
+  }
+
+  #header-carousel .cI .Ci {
+    min-height: 600px !important;
+  }
+
+  #header-carousel .cI .Ci .carousel-caption {
+    height: 600px;
+  }
+
+  #header-carousel .cI img.mobile {
+    display: block;
+  }
+
+  #header-carousel .cI img.desk {
+    display: none;
+  }
+}
+
+.heading-mask {
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  text-align: center;
+
+  color: #353d9a;
+  line-height: 1.2;
+  margin: 0;
+  padding: 10px;
+
+  background-size: cover;
+  text-shadow: none !important;
+  font-weight: 900;
+}
+
+@media (max-width: 1200px) {
+  .display-3 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .display-3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .display-3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+}
+
+@media (max-width: 360px) {
+  h1.mb-4 {
+    font-size: 16px;
+  }
+
+  .ace_mfg .writup .heading {
+    font-size: 16px;
+  }
+
+  .ace_mfg .writup {
+    line-height: 16px;
+  }
+}
