@@ -11210,3 +11210,19 @@ h6,
     line-height: 16px;
   }
 }
+
+.thank h3{
+  text-decoration: underline;
+}
+
+.thankyou{
+  padding-right: 0%;
+  padding-left: 0%;
+}
+
+.thankyou-container{
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
