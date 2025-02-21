@@ -154,11 +154,13 @@
             width: 50%;
         }
 
-        .product-d {
+         .product-d {
             display: flex;
             width: 100%;
             gap: 20px;
+      
         }
+
 
         .product-d .table table {
             height: 100%;
@@ -177,6 +179,23 @@
             width: 100%;
             object-fit: scale-down;
         }
+        @media(max-width:992px){
+    .product-d {
+           
+            flex-direction: column;
+    align-items: center;
+        }
+        .product-d .table{
+            width:100%;
+        }
+        .product-d .product-img {
+            height: 450px;
+            width: 100%;
+        }
+        .product-d .product-img img{
+            object-fit: unset;
+        }
+}
     </style>
     <!-- About End -->
 
