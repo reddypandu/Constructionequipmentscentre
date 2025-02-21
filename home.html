@@ -26,7 +26,8 @@
     <!-- End Google Tag Manager -->
 
     <meta name="google-site-verification" content="IubzhK5gmqU-B4RO92feILX6C5S56MJPy_2JZOzhNwM" />
-
+   <!-- Customized Bootstrap Stylesheet-->
+ 
 </head>
 
 
@@ -182,6 +183,46 @@
 whatsapp logo
 -->
 
+<style>
+    @media (max-width: 992px) {
+  .drop-items {
+    position: unset;
+  }
+
+  .d-arrow {
+    display: none;
+  }
+
+  .navbar-light .navbar-nav li {
+    border-bottom: 1px solid white;
+  }
+
+  /* .navbar-light .navbar-nav {
+    overflow-y: scroll;
+  } */
+
+  .d-plus {
+    display: block;
+    color: #ffc31d;
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 1rem;
+    margin-top: -2.5rem;
+    cursor: pointer;
+  }
+
+  .drop-down:hover .drop-items {
+    display: none;
+  }
+
+  .drop-down.active .drop-items {
+    display: block;
+    width: 100%;
+    left: 0;
+  }
+}
+</style>
+
     <div class="whatsapp">
         <a href="https://wa.me/+919959997132" target="_blank" class="fab fa-whatsapp"></a>
         <div>
@@ -195,7 +236,20 @@ whatsapp logo
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
+<script>
+   $(document).ready(function () {
+  const $btn = $(".drop-down");
+  const $li = $(".drop-down .nav-item");
+  const $nav = $(".nav-item");
 
+  $btn.on("click", function () {
+    $(this).toggleClass("active");
+    $li.css("color", "#ffc31d");
+    $nav.removeClass("active");
+  });
+});
+
+</script>
 
 
 
